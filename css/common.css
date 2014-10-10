@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*Reset*/
-html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}body,button,input,select,textarea{font:12px/1.5 tahoma,arial,"microsoft yahei",\5b8b\4f53;}input,select,textarea{font-size:100%;outline:medium none;}table{border-collapse:collapse;border-spacing:0;}th{text-align:inherit;}fieldset,img{border:0;}iframe{display:block;}abbr,acronym{border:0;font-variant:normal;}del{text-decoration:line-through;}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500;}ol,ul{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}q:before,q:after{content:'';}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}a:hover{text-decoration:underline;}ins,a{text-decoration:none;}
+html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53;}input,select,textarea{font-size:100%;outline:medium none;}table{border-collapse:collapse;border-spacing:0;}th{text-align:inherit;}fieldset,img{border:0;}iframe{display:block;}abbr,acronym{border:0;font-variant:normal;}del{text-decoration:line-through;}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500;}ol,ul{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}q:before,q:after{content:'';}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}a:hover{text-decoration:underline;}ins,a{text-decoration:none;}
 /*Base*/
 .clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
 .clearfix {zoom:1;}
@@ -19,8 +19,7 @@ a:hover{text-decoration:none;}
 .tr{text-align:right;}
 .hide{display:none;}
 .vta-m{vertical-align:middle;}
-.w{width:1000px;margin:0 auto;}
-.w1190{width:1190px;margin:0 auto 10px;min-width:1190px;}
+.w{width:982px;margin:0 auto;}
 
 .mt10{margin-top:10px;}
 .mt15{margin-top:15px;}
@@ -49,35 +48,29 @@ a:hover{text-decoration:none;}
 .fwb{font-weight:700;}
 
 .ico{display:inline-block;}
-.ico-phone{width:18px;height:20px;background:url(images/ico-phone.png) no-repeat 0 0;}
 
-.header{height:136px;background:#FDCBD4 url(images/header-bg.png) no-repeat 50% 0;}
-.index-header{background-color:#8D8FDA;}
-.header .w{position:relative;}
-.header .logo img{margin:5px 0 10px 0;}
-.header .contact{position:absolute;top:20px;right:0;height:116px;}
-.header .contact .c-phone .ico-phone{margin-top:36px;}
-.header .contact .c-phone .phone-number{margin:0 10px 0 5px;}
-.header .contact .c-phone{line-height:90px;font-size:18px;color:#FFF;}
-.header .contact .c-wx{text-align:center;}
-.header .contact .c-wx p{color:#FFF;line-height:24px;}
+html,body{background-color: #ECECEC;}
+.header .ht{height:36px;line-height:36px;border-bottom:1px solid #A82C43;background-color: #CB2F4B;color:#FFF;}
+.header .ht-l span{margin:0 16px 0 20px;}
+.header .ht a{margin:0 16px;color:#FFF;}
+.header .ht a:hover{text-decoration:underline;}
+.header .hb{height:88px;border-top: 3px solid #101010;background-color: #131313;}
+.header .logo{margin:15px 45px 0 19px;}
+.header .menu{line-height:88px;}
+.header .menu a{margin:0 13px;color:#656b72;font-size:16px;font-family:"microsoft yahei";}
+.header .menu .cur,.header .menu a:hover{color:#FFF;}
+.header .search{position: relative;width:216px;height:31px;margin:28px 20px 0 0;background: url(images/sprite.png) no-repeat 0 0;}
+.header .search .placeholder{position:absolute;width:150px;height:30px;line-height:30px;top:0;left:29px;overflow:hidden;}
+.header .search .placeholder input,.header .search .placeholder span{position:absolute;width:100%;height:30px;top:0;left:0;color:#656b72;font-family:"microsoft yahei";}
+.header .search .placeholder input{border:0 none;background:none;color:#828282;}
+.header .search .search-btn{position:absolute;top:0;right:0;width:34px;height:30px;line-height:30px;border:0 none;background:none;text-align:center;color:#828282;cursor:pointer;}
 
-.menu{height:36px;line-height:36px;background-color:#FB7A8C;}
-.index-menu{background-color:#9B7CD5;}
-.menu a,.menu a:visited{display:inline;float:left;min-width:54px;margin:0 12px;padding:0 10px;font-size:18px;color:#FFF;text-align:center;text-shadow: 1px 1px 1px #090204;}
-.menu a.cur{background-color:#F89424;box-shadow:1px 1px 2px rgba(20,20,20,0.2);}
-.index-menu a.cur{background-color:#A4C73B;}
-.menu a:hover{text-decoration:none;color:#FFF;}
+.smenu{margin-top:12px;}
+.smenu ul{width:900px;border-bottom:1px solid #0F0E0E;}
+.smenu li{display:inline;float:left;height:34px;line-height:34px;}
+.smenu li a{margin:0 20px;color:#282724;font-size:18px;font-family:"microsoft yahei";}
+.smenu .cur{background: url(images/smenu-arrow.png) no-repeat 50% bottom;}
+.smenu .cur a,.smenu li a:hover{color:#d2334f;}
 
-.footer .bl{height:21px;margin-top:-21px;background:url(images/footer-bg-red.png) repeat-x 0 0;}
-.index-footer .bl{height:24px;margin-top:-24px;background:url(images/footer-bg-blue.png) repeat-x 0 0;}
-.footer .link{padding:40px 0;background-color:#FB7A8C;line-height:20px;color:#FFF;text-align:center;font-family:\5b8b\4f53;}
-.index-footer .link{background-color:#9B7CD5;}
-.footer .link a{font-size:14px;color:#FFF;font-family:\5b8b\4f53;}
-.footer .link span{margin:0 10px;}
-
-.pages{line-height:26px;text-align:right;font-family:\5b8b\4f53;}
-.pages a,.pages i,.pages span{display:inline-block;height:26px;}
-.pages a{padding:0 8px;border:1px solid #F7BA94;background-color:#FFF8F8;color:#000;font-family:\5b8b\4f53;}
-.pages a.cur{background-color:#C51B09;color:#FFF;}
-.pages span{margin:0 5px;}
+.tab li{display:inline;float:left;height:24px;line-height:24px;padding:0 15px;margin-right:4px;font-size:14px;color:#282724;font-family:"microsoft yahei";cursor:pointer;}
+.tab li.cur{background:#CB2F4B url(images/tab-cur.png) no-repeat 50% bottom;color:#FFF;cursor:default;}

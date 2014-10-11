@@ -72,5 +72,12 @@ html,body{background-color: #ECECEC;}
 .smenu .cur{background: url(images/smenu-arrow.png) no-repeat 50% bottom;}
 .smenu .cur a,.smenu li a:hover{color:#d2334f;}
 
+.footer{margin-top:5px;padding:5px 0 0 0;background:#121212 url(images/footer-repeat.png) repeat-x 0 0;text-align:center;}
+.footer .link{padding:5px 0;}
+.footer .link a{margin:0  24px;line-height:20px;color:#FFF;}
+.footer .link a:hover{text-decoration:underline;}
+.footer .copyright{line-height:26px;color:#FFF;font-family:"microsoft yahei";}
+.footer .f-contact{line-height:32px;color:#FFF;font-family:\9ED1\4F53;}
+
 .tab li{display:inline;float:left;height:24px;line-height:24px;padding:0 15px;margin-right:4px;font-size:14px;color:#282724;font-family:"microsoft yahei";cursor:pointer;}
 .tab li.cur{background:#CB2F4B url(images/tab-cur.png) no-repeat 50% bottom;color:#FFF;cursor:default;}

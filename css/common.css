@@ -50,20 +50,20 @@ a:hover{text-decoration:none;}
 .ico{display:inline-block;}
 
 html,body{background-color: #ECECEC;}
-.header .ht{height:36px;line-height:36px;border-bottom:1px solid #A82C43;background-color: #CB2F4B;color:#FFF;}
+.header .ht{height:25px;line-height:25px;border-bottom:1px solid #D690A1;background:#CB2F4B url(images/repeatx.png) repeat-x 0 0;color:#FFF;}
 .header .ht-l span{margin:0 16px 0 20px;}
 .header .ht a{margin:0 16px;color:#FFF;}
 .header .ht a:hover{text-decoration:underline;}
-.header .hb{height:88px;border-top: 3px solid #101010;background-color: #131313;}
-.header .logo{margin:15px 45px 0 19px;}
+.header .hb{height:88px;border-top: 3px solid #101010;background: #131313 url(images/repeatx.png) repeat-x 0 -31px;}
+.header .logo{margin:12px 45px 0 19px;}
 .header .menu{line-height:88px;}
 .header .menu a{margin:0 13px;color:#656b72;font-size:16px;font-family:"microsoft yahei";}
 .header .menu .cur,.header .menu a:hover{color:#FFF;}
 .header .search{position: relative;width:216px;height:31px;margin:28px 20px 0 0;background: url(images/sprite.png) no-repeat 0 0;}
-.header .search .placeholder{position:absolute;width:150px;height:30px;line-height:30px;top:0;left:29px;overflow:hidden;}
-.header .search .placeholder input,.header .search .placeholder span{position:absolute;width:100%;height:30px;top:0;left:0;color:#656b72;font-family:"microsoft yahei";}
-.header .search .placeholder input{border:0 none;background:none;color:#828282;}
-.header .search .search-btn{position:absolute;top:0;right:0;width:34px;height:30px;line-height:30px;border:0 none;background:none;text-align:center;color:#828282;cursor:pointer;}
+.header .search .placeholder{position:absolute;width:152px;height:30px;top:0;left:17px;overflow:hidden;}
+.header .search .placeholder input,.header .search .placeholder span{position:absolute;width:100%;height:30px;line-height:30px;top:0;left:0;color:#C3C5C7;}
+.header .search .placeholder input{height:18px;line-height:18px;padding:6px 0;border:0 none;background:none;color:#000;}
+.header .search .search-btn{position:absolute;top:0;right:0;width:44px;height:30px;line-height:30px;border:0 none;background:none;text-align:center;color:#000;cursor:pointer;}
 
 .smenu{margin-top:12px;}
 .smenu ul{width:900px;border-bottom:1px solid #0F0E0E;}
@@ -72,12 +72,13 @@ html,body{background-color: #ECECEC;}
 .smenu .cur{background: url(images/smenu-arrow.png) no-repeat 50% bottom;}
 .smenu .cur a,.smenu li a:hover{color:#d2334f;}
 
-.footer{margin-top:5px;padding:5px 0 0 0;background:#121212 url(images/footer-repeat.png) repeat-x 0 0;text-align:center;}
+.footer{margin-top:5px;padding:5px 0 20px 0;background:#121212 url(images/footer-repeat.png) repeat-x 0 0;text-align:center;font-family:\9ED1\4F53;}
 .footer .link{padding:5px 0;}
 .footer .link a{margin:0  24px;line-height:20px;color:#FFF;}
 .footer .link a:hover{text-decoration:underline;}
-.footer .copyright{line-height:26px;color:#FFF;font-family:"microsoft yahei";}
-.footer .f-contact{line-height:32px;color:#FFF;font-family:\9ED1\4F53;}
+.footer .copyright{line-height:26px;color:#FFF;}
+.footer .copyright span{margin:0 8px;}
+.footer .f-contact{line-height:32px;color:#FFF;}
 
 .tab li{display:inline;float:left;height:24px;line-height:24px;padding:0 15px;margin-right:4px;font-size:14px;color:#282724;font-family:"microsoft yahei";cursor:pointer;}
 .tab li.cur{background:#CB2F4B url(images/tab-cur.png) no-repeat 50% bottom;color:#FFF;cursor:default;}

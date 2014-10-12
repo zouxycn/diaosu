@@ -32,8 +32,8 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .service-entry a:hover{background-color: #CB2F4B;}
 .img-list{padding:13px 0 13px 18px;}
 .img-list a{float:left;width:91px;margin:0 16px 5px 0;}
-.img-list a img{width:91px;height:90px;}
-.img-list a p{width:91px;height:26px;line-height:21px;color:#4A4A4A;text-align:center;overflow:hidden;}
+.img-list a img{width:90px;height:90px;}
+.img-list a p{width:90px;height:26px;line-height:21px;color:#4A4A4A;text-align:center;overflow:hidden;}
 .img-list a:hover p{text-decoration:underline;}
 .box-l .img-list a{margin-right:26px;}
 .box-l .img-list{width:720px;padding-top:7px;}

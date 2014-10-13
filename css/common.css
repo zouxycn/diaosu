@@ -50,11 +50,11 @@ a:hover{text-decoration:none;color:#d2334f;}
 .ico{display:inline-block;}
 
 html,body{background-color: #ECECEC;}
-.header .ht{height:25px;line-height:25px;border-bottom:1px solid #D690A1;background:#d2334f url(images/repeatx.png) repeat-x 0 0;color:#FFF;font-family:"microsoft yahei";}
-.header .ht-l span{margin:0 16px 0 20px;}
-.header .ht a{margin:0 16px;color:#FFF;}
-.header .ht a:hover{text-decoration:underline;}
-.header .hb{height:88px;border-top: 3px solid #101010;background: #111111 url(images/repeatx.png) repeat-x 0 -31px;}
+.header-ht{height:25px;line-height:25px;border-bottom:1px solid #D690A1;background:#d2334f url(images/repeatx.png) repeat-x 0 0;color:#FFF;font-family:"microsoft yahei";}
+.header-ht .ht-l span{margin:0 16px 0 20px;}
+.header-ht a{margin:0 16px;color:#FFF;}
+.header-ht a:hover{text-decoration:underline;}
+.header{height:88px;border-top: 3px solid #101010;background: #111111 url(images/repeatx.png) repeat-x 0 -31px;}
 .header .logo{margin:12px 45px 0 19px;}
 .header .menu{line-height:88px;}
 .header .menu a{margin:0 13px;color:#7a7a7a;font-size:16px;font-family:"microsoft yahei";}

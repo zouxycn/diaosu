@@ -40,3 +40,7 @@ DS.member.index = {
 		});
 	}
 }
+
+DS.member.sculpturer = {
+	init:function(){}
+}

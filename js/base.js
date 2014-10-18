@@ -465,7 +465,28 @@ var DS = (function($){
 
     _DS.common = {
         init:function(){
-
+            this.placeHolder();
+        },
+        placeHolder:function(){
+            $(".placeholder").each(function(){
+                var _ph = $(this).find("span");
+                var _ipt = $(this).find("input");
+                _ph.bind("click",function(){
+                    _ph.addClass("hide");
+                    _ipt.focus();
+                });
+                _ipt.bind({
+                    focusin:function(){
+                        _ph.addClass("hide");
+                    },
+                    blur:function(){
+                        if(_ipt.val() == "")
+                        {
+                            _ph.removeClass("hide");
+                        }
+                    }
+                })
+            });
         }
     }
 

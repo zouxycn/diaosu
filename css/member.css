@@ -1,5 +1,4 @@
 @charset "utf-8";
-.box{display: inline;float:left;width:100%;margin-top:4px;border:1px solid #E1E1E1;border-radius:4px;background-color: #fff;overflow:hidden;}
 .content .box-r{float:right;width:263px;}
 .content .box-l{width:710px;}
 .content .box-title{position:relative;width:944px;height:20px;line-height:20px;margin:19px auto 0;background: url(images/box-title.png) no-repeat right 14px;border-bottom:1px solid #CB2F4B;}
@@ -80,3 +79,38 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .work-show .school-list .sl-item:hover p{color:#7A7A7A;}
 .work-show .school-list p a{color:#7A7A7A;}
 .work-show .school-list p a:hover{text-decoration:underline;}
+
+.filter-box{padding:4px 18px 22px 18px;}
+.filter-box .bread{height:30px;line-height:30px;}
+.filter-box .bread a{color:#7A7A7A;}
+.filter-box .bread .gt{margin:0 6px;}
+.filter-box .bread .sf{display: inline-block;position: relative;line-height:17px;padding:0 24px 0 4px;background-color: #CA3551;color:#FFFFF3;}
+.filter-box .bread .sf i{position: absolute;width:11px;height:11px;top:4px;right:3px;background: url(images/sprite.png) no-repeat -91px -36px;}
+.filter-box .bread .sf:hover i{background-position: -107px -36px;}
+.filter-box .ft-attr{width:66px;height:26px;line-height:26px;margin:0 6px 0 0;font-weight:700;overflow:hidden;}
+.filter-box .ft-tag{width:846px;}
+.filter-box .ft-tag-school{height:100px;padding:0 12px;border:1px solid #D4D4D4;}
+.filter-box .ft-tag a{float:left;height:26px;line-height:26px;margin-right:15px;}
+.filter-box .ft-schools{position: relative;}
+.filter-box .ft-schools .more{position: absolute;right:0;bottom:0;}
+.filter-box .ft-schools .more .ico-arrow{margin-left:10px;}
+.filter-box .fts{width:810px;height:53px;overflow:hidden;}
+.search-surname{position: relative;float:right;width:237px;height:24px;}
+.search-surname .placeholder{position: absolute;width:176px;height:22px;top:0;left:0;border:1px solid #CA3551;}
+.search-surname .placeholder span{position: absolute;width:176px;height:22px;line-height:22px;top:0;left:0;color:#7A7A7A;text-indent:6px;overflow:hidden;z-index: 2;}
+.search-surname .placeholder input{position: absolute;width:164px;height:18px;line-height:18px;top:0;left:0;padding:2px 6px;border:0 none;}
+.search-surname .search-btn{position: absolute;width:61px;height:24px;line-height:24px;top:0;right:0;border:0 none;background-color: #CA3551;color:#FFF;text-align:center;cursor: pointer;}
+
+.sculpturer-box{height:605px;padding-top:22px;overflow:hidden;}
+.sculpturer-list{padding-top:6px;}
+.sculpturer-list li{display: inline;float:left;margin:0 0 37px 0;}
+.sculpturer-list .img{width:115px;margin-right:7px;}
+.sculpturer-list .img img{width:115px;height:115px;}
+.sculpturer-list dl{display: inline;float:left;width:190px;}
+.sculpturer-list dt{color:#7A7A7A;}
+.sculpturer-list dt a{margin-right:8px;color:#000;font-size:14px;font-family: "microsoft yahei";}
+.sculpturer-list dt a:hover{color:#000;text-decoration:underline;}
+.sculpturer-list dd{margin-top:2px;}
+.sculpturer-list p{width:100%;height:24px;line-height:24px;color:#7A7A7A;overflow:hidden;}
+
+.pagination-box{margin-bottom:80px;padding:8px 18px;}

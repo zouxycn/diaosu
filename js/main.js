@@ -39,8 +39,51 @@ DS.member.index = {
 			$(this).removeClass("sl-item-hover");
 		});
 	}
-}
+};
 
 DS.member.sculpturer = {
-	init:function(){}
-}
+	init:function(){
+		this.showMoreSchool();
+		this.searchFilter();
+	},
+	showMoreSchool:function(){
+		var _box = $("#ftSchool"),
+			_schoolTag = _box.find(".ft-tag"),
+			_moreBtn = _box.find(".more");
+
+		_moreBtn.on("click",function(){
+			_moreBtn.find(".ico").toggleClass("ico-arrow-up");
+			_moreBtn.find(".ico").hasClass("ico-arrow-up") ? _moreBtn.find("span").text("收起") : _moreBtn.find("span").text("更多");
+			_schoolTag.toggleClass("ft-tag-more");
+		});
+	},
+	searchFilter:function(){
+		DS.widget("SearchFilter",{
+			box: "#ftSchool",
+			tab: ".fts-tab",
+			itemBox: ".fts"
+		});
+	}
+};
+
+DS.member.artSchool = {
+	init:function(){
+		this.listHover();
+	},
+	listHover:function(){
+		var _box = $("#artSchool"),
+			_rankBox = $("#articleRank");
+
+		_box.find(".sculpturer-list").find("li").hover(function(){
+			$(this).addClass("cur");
+		},function(){
+			$(this).removeClass("cur");
+		});
+
+		_rankBox.find("li").hover(function(){
+			$(this).addClass("cur");
+		},function(){
+			$(this).removeClass("cur");
+		});
+	}
+};

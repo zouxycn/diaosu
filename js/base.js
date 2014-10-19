@@ -327,7 +327,7 @@ var DS = (function($){
        this.btnText = this.opt.btnText || [];
        this.callback = this.opt.callback || [];
        this.initializer();
-    }
+    };
 
     _DS.widget.Popbox.prototype = {
         initializer : function(){
@@ -375,7 +375,7 @@ var DS = (function($){
             box.remove();
             _mask.remove();
         }
-    }
+    };
 
     /**
      * [输入字数限制]
@@ -417,7 +417,7 @@ var DS = (function($){
                 clearInterval(timer);
             }
         })
-    }
+    };
 
     
 
@@ -429,7 +429,7 @@ var DS = (function($){
         this.count = 1;
         this.callback = this.opt.callback || function(){};
         this.init();
-    }
+    };
 
     _DS.widget.ChangeNum.prototype = {
         init:function(){
@@ -461,7 +461,43 @@ var DS = (function($){
         showNum:function(n){
             this.txt.val(this.count);
         }
-    }
+    };
+
+    _DS.widget.SearchFilter = function(opt){
+        this.opt = opt || {};
+        this.box = this.opt.box;
+        this.tab = this.opt.tab || ".tab";
+        this.tabItem = this.opt.tabItem || "a";
+        this.itemBox = this.opt.itemBox;
+        this.item = this.opt.item || "a";
+        this.init();
+    };
+
+    _DS.widget.SearchFilter.prototype = {
+        init:function(){
+            var _this = this,
+                _box = $(_this.box),
+                _tab = _box.find(_this.tab),
+                _tabItem = _tab.find(_this.tabItem);
+
+            _tabItem.on("click",function(){
+                var _fv = $(this).text();
+                _this.filterItems(_fv);
+            });
+        },
+        filterItems:function(v){
+            var _this = this,
+                _box = $(_this.box),
+                _itemBox = _box.find(_this.itemBox),
+                _item = _itemBox.find(_this.item);
+
+            _item.each(function(){
+                $(this).attr("sindex") == v ? $(this).show() : $(this).hide();
+            });
+
+        }
+    };
+
 
     _DS.common = {
         init:function(){

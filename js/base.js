@@ -482,6 +482,7 @@ var DS = (function($){
 
             _tabItem.on("click",function(){
                 var _fv = $(this).text();
+                $(this).addClass("cur").siblings().removeClass("cur");
                 _this.filterItems(_fv);
             });
         },

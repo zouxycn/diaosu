@@ -90,6 +90,7 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .filter-box .ft-attr{width:66px;height:26px;line-height:26px;margin:0 6px 0 0;font-weight:700;overflow:hidden;}
 .filter-box .ft-tag{width:846px;}
 .filter-box .fts-tab{display:none;}
+.filter-box .fts-tab .cur{color:#d2334f;}
 .filter-box .ft-tag-more{height:100px;padding:0 12px;border:1px solid #D4D4D4;}
 .filter-box .ft-tag-more .fts-tab{display:block;}
 .filter-box .ft-tag a{float:left;height:26px;line-height:26px;margin-right:15px;white-space:nowrap;}
@@ -97,8 +98,8 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .filter-box .ft-schools .tip{display:none;position: absolute;bottom: 0;right:80px;line-height:24px;color:#000;}
 .filter-box .ft-schools .tip span{color:#7A7A7A;}
 .filter-box .ft-schools .ft-tag-more .tip{display:block;}
-.filter-box .ft-schools .more{position: absolute;right:0;bottom:0;}
-.filter-box .ft-schools .more .ico-arrow{margin-left:10px;vertical-align:middle;}
+.filter-box .ft-schools .more{position: absolute;right:0;bottom:0;_bottom:-5px;}
+.filter-box .ft-schools .more .ico-arrow{margin-left:10px;vertical-align:middle;_vertical-align:-5px;}
 .filter-box .fts{width:810px;height:53px;overflow:hidden;}
 .filter-box .ft-tag-more .fts{width:100%;overflow:hidden;overflow-y:auto;}
 .search-surname{position: relative;float:right;width:237px;height:24px;}

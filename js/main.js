@@ -55,6 +55,11 @@ DS.member.sculpturer = {
 			_moreBtn.find(".ico").toggleClass("ico-arrow-up");
 			_moreBtn.find(".ico").hasClass("ico-arrow-up") ? _moreBtn.find("span").text("收起") : _moreBtn.find("span").text("更多");
 			_schoolTag.toggleClass("ft-tag-more");
+			if(!_moreBtn.find(".ico").hasClass("ico-arrow-up"))
+			{
+				$("#ftSchool").find(".fts").find("a").show();
+				$("#ftSchool").find(".fts-tab").find("a").removeClass("cur");
+			}
 		});
 	},
 	searchFilter:function(){

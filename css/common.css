@@ -93,7 +93,7 @@ p{color:#4A4A4A;}
 .owl-controls .owl-page{display:inline-block;}
 
 .pagination{text-align: center;}
-.pagination li{display:inline-block;}
+.pagination li{display:inline-block;_float:left;_margin:0 2px;}
 .pagination li a,.pagination li span{float:left;width:26px;line-height:26px;border:1px solid #E2E2E2;border-radius:3px;background-color: #D9DFE3;font-size:14px;text-align:center;}
 .pagination .active a,.pagination .active span{background-color: #333;color:#FFF;cursor:default;}
 .pagination .disabled a,.disabled .active span{cursor:not-allowed;}

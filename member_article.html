@@ -7,6 +7,7 @@
 <link type="text/css" rel="stylesheet" href="css/common.css" />
 <link type="text/css" rel="stylesheet" href="css/member.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
 </head>
 <body>
 <div class="header-ht">
@@ -17,8 +18,8 @@
 			<a href="#">免费注册</a>
 		</div>
 		<div class="ht-r fr">
-			<a href="#">设为首页</a>
-			<a href="#">收藏本站</a>
+			<a onclick="DS.widget.common.setHome(this,'http://www.diaosu.cn');" href="#">设为首页</a>
+			<a onclick="DS.widget.common.addToFavorite()" href="#">收藏本站</a>
 		</div>
 	</div>
 </div>
@@ -183,7 +184,6 @@
 	<div class="copyright"><span>Copyright 2003-2014　DIAOSU.CN　All rights reserved 版权所有</span> <span>中国雕塑网 苏ICP备11036881号</span></div>
 	<div class="f-contact">联系电话：025-86279020、025-86209756、025-86278870</div>
 </div>
-<script type="text/javascript" src="js/base.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript">
 	$(function(){

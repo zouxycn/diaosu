@@ -79,9 +79,17 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .work-show .school-list .sl-item:hover p{color:#7A7A7A;}
 .work-show .school-list p a{color:#7A7A7A;}
 .work-show .school-list p a:hover{text-decoration:underline;}
+.work-show-channel{height:auto;}
+.work-show-channel .school-list{width:980px;padding-left:0;}
+.work-show-channel .school-list .sl-item{width:154px;height:194px;margin-right:40px;}
+.work-show-channel .school-list .sl-item .ws-img{width:152px;height:145px;}
+.work-show-channel .school-list .sl-item:hover .ws-img,.work-show-channel .school-list .sl-item-hover .ws-img{border-color:#FFF;}
+.work-show-channel .school-list img{max-height:145px;}
+.work-show-channel .school-list .sl-item strong{height:17px;line-height:17px;margin-top:8px;}
+.work-show-channel .school-list .sl-item p{height:19px;line-height:19px;}
 
 .filter-box{padding:4px 18px 22px 18px;}
-.filter-box .bread{height:30px;line-height:30px;}
+.filter-box .bread{position:relative;height:30px;line-height:30px;}
 .filter-box .bread a{color:#7A7A7A;}
 .filter-box .bread .gt{margin:0 6px;}
 .filter-box .bread .sf{display: inline-block;position: relative;line-height:17px;padding:0 24px 0 4px;background-color: #CA3551;color:#FFFFF3;}
@@ -107,6 +115,14 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .search-surname .placeholder span{position: absolute;width:176px;height:22px;line-height:22px;top:0;left:0;color:#7A7A7A;text-indent:6px;overflow:hidden;z-index: 2;}
 .search-surname .placeholder input{position: absolute;width:164px;height:18px;line-height:18px;top:0;left:0;padding:2px 6px;border:0 none;}
 .search-surname .search-btn{position: absolute;width:61px;height:24px;line-height:24px;top:0;right:0;border:0 none;background-color: #CA3551;color:#FFF;text-align:center;cursor: pointer;}
+.filter-box-work .ft-line{margin-top:7px;}
+.filter-box-work .search-surname{float:none;position:absolute;top:3px;left:120px;}
+.filter-box-work .ft-attr{height:21px;line-height:21px;}
+.filter-box-work .ft-tag a{height:21px;line-height:21px;padding:0 3px;}
+.filter-box-work .ft-tag .cur,.filter-box-work .ft-tag a:hover{background-color:#000;color:#FFF;}
+.filter-box-work select,.filter-box-work .short-line{float:left;color:#7A7A7A;}
+.filter-box-work select{margin-top:2px;}
+.filter-box-work .short-line{height:21px;line-height:21px;margin:0 3px;}
 
 .sculpturer-box{height:605px;padding-top:22px;overflow:hidden;}
 .sculpturer-list{padding-top:6px;}

@@ -101,3 +101,11 @@ p{color:#4A4A4A;}
 .ico{display: inline-block;}
 .ico-arrow{width:9px;height:5px;background: url(images/sprite.png) no-repeat -123px -36px;}
 .ico-arrow-up{background: url(images/sprite.png) no-repeat -137px -36px;}
+
+.gotop{display:none;position:fixed;right:10px;bottom:100px;}
+.gotop a{position:absolute;display:block;width:48px;height:80px;right:0;bottom:0;background:url(images/sprite.png) no-repeat 0 -98px;}
+.gotop a:hover{background-position:-53px -98px;}
+.gotop .code{position:absolute;display:none;width:118px;height:259px;padding-top:9px;right:46px;bottom:0;border:1px solid #000000;background-color:#FFF;text-align:center;}
+.gotop .code p{height:30px;line-height:30px;font-family:"microsoft yahei";color:#000;}
+.gotop a p{color:#000;}
+.gotop a:hover .code{display:block;}

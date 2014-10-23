@@ -51,7 +51,6 @@ a:hover{text-decoration:none;color:#d2334f;}
 @media screen and (-webkit-min-device-pixel-ratio:0){.justify-align:after{content:".";display: inline-block;width:100%;overflow:hidden;height:0;}}
 .ico{display:inline-block;}
 
-html,body{background-color: #ECECEC;}
 p{color:#4A4A4A;}
 .box{display: inline;float:left;width:100%;margin-top:4px;border:1px solid #E1E1E1;border-radius:4px;background-color: #fff;overflow:hidden;}
 .sbox{width:944px;padding:18px;margin:0 auto;margin-top:4px;border:1px solid #E1E1E1;border-radius:4px;background-color: #fff;overflow:hidden;}

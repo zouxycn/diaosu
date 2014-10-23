@@ -1,0 +1,29 @@
+@charset "utf-8";
+.s-header{height:72px;line-height:72px;margin-top:48px;border-bottom:1px solid #E1E1E1;}
+.s-header .logo{margin:0 20px;}
+.s-header h2{font-size:24px;font-weight:400;font-family:"microsoft yahei";}
+.s-header .regist-entry{padding-right:40px;}
+.s-header .regist-entry,.s-header .regist-entry a{font-size:16px;font-family:"microsoft yahei";}
+.s-header .regist-entry a{margin-left:5px;color:#d2334f;}
+
+.login-form{width:392px;margin:60px auto 0;}
+.login-form li{margin-bottom:10px;}
+.login-form .placeholder{display:inline;float:left;position:relative;width:360px;height:32px;border:1px solid #7A7A7A;}
+.login-form .placeholder span,.login-form .placeholder input{position:absolute;width:100%;height:18px;line-height:18px;padding:7px 0;font-size:16px;color:#7A7A7A;text-indent:16px;font-family:"microsoft yahei";overflow:hidden;}
+.login-form .placeholder input{border:0 none;background:none;color:#000;}
+.login-form .prompt{display:inline;float:left;margin-left:10px;line-height:32px;color:#D2334F;}
+.login-form .verify-box{width:362px;}
+.login-form .verify-code .placeholder{width:117px;}
+.login-form .verify-img{display:inline;float:left;margin:2px 0 0 30px;}
+.login-form .form-btn{padding-top:24px;}
+.login-form .btn-login{display:block;width:362px;height:70px;border:0 none;border-radius:5px;background:#D2334F none;color:#FFF;font:24px/70px "microsoft yahei";cursor:pointer;}
+.login-form .kf{margin-top:36px;}
+.login-form .err{height:15px;line-height:15px;color:#D2334F;}
+.findpwd-form{margin-top:0;}
+.findpwd-form .pace{height:60px;line-height:60px;padding-left:5px;font-size:16px;color:#7A7A7A;font-family:"microsoft yahei";}
+.findpwd-form .pace em{margin:0 5px;}
+.findpwd-form .pace .cur{color:#000;}
+.findpwd-form .changepwd-success{width:100%;padding:86px 0 60px 0;text-align:center;}
+.findpwd-form .changepwd-success p{line-height:43px;color:#d2334f;font-size:24px;font-family:"microsoft yahei";}
+.findpwd-form .changepwd-success .btn{display:block;width:90px;height:43px;line-height:43px;margin:18px auto 0;background-color:#D2334F;color:#FFF;font-size:18px;font-family:"microsoft yahei";}
+.s-footer{margin-top:10px;border-top:1px solid #E1E1E1;line-height:26px;text-align:center;color:#7A7A7A;}

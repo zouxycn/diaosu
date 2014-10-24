@@ -26,4 +26,21 @@
 .findpwd-form .changepwd-success{width:100%;padding:86px 0 60px 0;text-align:center;}
 .findpwd-form .changepwd-success p{line-height:43px;color:#d2334f;font-size:24px;font-family:"microsoft yahei";}
 .findpwd-form .changepwd-success .btn{display:block;width:90px;height:43px;line-height:43px;margin:18px auto 0;background-color:#D2334F;color:#FFF;font-size:18px;font-family:"microsoft yahei";}
+
+.regist-form{width:430px;margin-top:20px;}
+.regist-type{width:400px;height:49px;margin-bottom:26px;border-bottom:1px solid #000;}
+.regist-type a{float:left;height:50px;padding:0 15px;color:#000;font:24px/50px "microsoft yahei";}
+.regist-type .cur{background-color:#000;color:#FFF;}
+.regist-form .placeholder{width:398px;}
+.regist-form .btn-login{margin-left:16px;}
+.regist-form .placeholder span,.regist-form .placeholder input{font-size:14px;}
+.regist-form .verify-msg .placeholder{width:298px;}
+.regist-form .get-verify{float:left;width:90px;height:34px;margin-left:10px;background-color:#D2334F;text-align:center;color:#FFF;font:14px/34px "microsoft yahei";}
+.regist-form .agree{margin-top:-8px;}
+.regist-form .agree p{line-height:21px;color:#000;}
+.regist-form .agree label{margin-left:18px;}
+.regist-form .agree label input{margin-right:6px;}
+.regist-form .form-btn{padding-top:5px;}
+.regist-form .kf{margin-top:20px;}
+
 .s-footer{margin-top:10px;border-top:1px solid #E1E1E1;line-height:26px;text-align:center;color:#7A7A7A;}

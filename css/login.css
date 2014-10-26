@@ -13,8 +13,9 @@
 .login-form .placeholder input{border:0 none;background:none;color:#000;}
 .login-form .prompt{display:inline;float:left;margin-left:10px;line-height:32px;color:#D2334F;}
 .login-form .verify-box{width:362px;}
-.login-form .verify-code .placeholder{width:117px;}
-.login-form .verify-img{display:inline;float:left;margin:2px 0 0 30px;}
+.login-form .verify-code .placeholder{width:173px;}
+.login-form .verify-img{display:inline;float:left;width:120px;height:30px;margin:2px 10px 0 12px;cursor:pointer;}
+.login-form .verify-change{float:left;width:36px;line-height:14px;margin-top:2px;}
 .login-form .form-btn{padding-top:24px;}
 .login-form .btn-login{display:block;width:362px;height:70px;border:0 none;border-radius:5px;background:#D2334F none;color:#FFF;font:24px/70px "microsoft yahei";cursor:pointer;}
 .login-form .kf{margin-top:36px;}
@@ -23,6 +24,8 @@
 .findpwd-form .pace{height:60px;line-height:60px;padding-left:5px;font-size:16px;color:#7A7A7A;font-family:"microsoft yahei";}
 .findpwd-form .pace em{margin:0 5px;}
 .findpwd-form .pace .cur{color:#000;}
+.findpwd-form .pace a{color:#7A7A7A;}
+.findpwd-form .pace a:hover{color:#D2334F;}
 .findpwd-form .changepwd-success{width:100%;padding:86px 0 60px 0;text-align:center;}
 .findpwd-form .changepwd-success p{line-height:43px;color:#d2334f;font-size:24px;font-family:"microsoft yahei";}
 .findpwd-form .changepwd-success .btn{display:block;width:90px;height:43px;line-height:43px;margin:18px auto 0;background-color:#D2334F;color:#FFF;font-size:18px;font-family:"microsoft yahei";}
@@ -35,12 +38,25 @@
 .regist-form .btn-login{margin-left:16px;}
 .regist-form .placeholder span,.regist-form .placeholder input{font-size:14px;}
 .regist-form .verify-msg .placeholder{width:298px;}
-.regist-form .get-verify{float:left;width:90px;height:34px;margin-left:10px;background-color:#D2334F;text-align:center;color:#FFF;font:14px/34px "microsoft yahei";}
+.regist-form .getverify-btn{float:left;width:90px;height:34px;margin-left:10px;background-color:#D2334F;text-align:center;color:#FFF;font:14px/34px "microsoft yahei";}
 .regist-form .agree{margin-top:-8px;}
 .regist-form .agree p{line-height:21px;color:#000;}
 .regist-form .agree label{margin-left:18px;}
 .regist-form .agree label input{margin-right:6px;}
 .regist-form .form-btn{padding-top:5px;}
-.regist-form .kf{margin-top:20px;}
+.regist-form .get-verify{position: absolute;width:398px;height:392px;border:1px solid #7A7A7A;background-color: #FFF;z-index: 2;}
+.regist-form .get-verify .gv-title{position: relative;height:32px;background-color: #7A7A7A;}
+.regist-form .get-verify .gv-title h3{font:14px/32px "microsoft yahei";color:#FFF;text-indent:12px}
+.regist-form .get-verify .close-btn{position: absolute;width:32px;height:32px;top:0;right:0;color:#FFF;font:24px/32px arial;text-align:center;}
+.regist-form .get-verify .verify-code .placeholder{width:122px;}
+.regist-form .get-verify .verify-box{width:304px;}
+.regist-form .get-verify .verify-code{width:334px;margin:27px auto 20px;}
+.regist-form .get-verify .get-verify-btn{display: block;width:165px;height:42px;line-height:42px;margin:0 auto;background-color: #CB2F4B;color:#FFF;text-align:center;font-size:14px}
+.regist-form-school .verify-code .placeholder{width:216px;}
+.regist-form-school .verify-box{width:400px;}
+.regist-form-school .tips{width:368px;margin:0 0 0 15px;padding-top:6px;}
+.regist-form-school .tips p{color:#000;line-height:21px;}
 
-.s-footer{margin-top:10px;border-top:1px solid #E1E1E1;line-height:26px;text-align:center;color:#7A7A7A;}
+.s-footer{margin-top:20px;}
+.s-footer .kf{width:392px;margin:0 auto;}
+.s-footer p{margin-top:10px;border-top:1px solid #E1E1E1;line-height:26px;text-align:center;color:#7A7A7A;}

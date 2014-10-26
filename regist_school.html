@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>登录-中国雕塑网</title>
+<title>注册-中国雕塑网</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 <link type="text/css" rel="stylesheet" href="css/common.css" />
 <link type="text/css" rel="stylesheet" href="css/login.css" />
@@ -18,29 +18,58 @@
 	</div>
 </div>
 <div class="w">
-	<div class="login-form regist-form">
+	<div class="login-form regist-form regist-form-school">
 		<div class="regist-type">
-			<a class="cur" href="#">个人</a>
-			<a href="#">院校</a>
+			<a href="#">个人</a>
+			<a class="cur" href="#">院校</a>
+		</div>
+		<div class="get-verify hide">
+			<div class="gv-title">
+				<h3>请输入下列图片中的字符</h3>
+				<a class="close-btn" href="javascript:void(0)">×</a>
+			</div>
+			<div class="verify-code">
+				<div class="verify-box fl">
+					<div class="placeholder">
+						<span>验证码</span>
+						<input type="text" />
+					</div>
+					<div class="verify-img"><img src="http://www.test.diaosu.cn/captcha" alt=""></div>
+					<span class="verify-change">点击图片更换</span>
+				</div>
+				<div class="prompt">×</div>
+				<i class="cl"></i>
+				<div class="err">图片验证码输入错误</div>
+			</div>
+			<a class="get-verify-btn" href="#">获取手机短信验证码</a>
 		</div>
 		<ul>
 			<li class="clearfix">
 				<div class="placeholder">
-					<span>请输入用户名/邮箱</span>
+					<span>院系名称</span>
 					<input type="text" />
 				</div>
-				<div class="prompt">×</div>
+				<div class="prompt"></div>
 				<i class="cl"></i>
-				<div class="err">用户名或邮箱不存在</div>
+				<div class="err"></div>
 			</li>
 			<li class="clearfix">
 				<div class="placeholder">
-					<span>请输入密码</span>
-					<input type="password" />
+					<span>联系人邮箱</span>
+					<input type="text" />
 				</div>
-				<div class="prompt">√</div>
+				<div class="prompt"></div>
 				<i class="cl"></i>
-				<div class="err">密码输入错误</div>
+				<div class="err"></div>
+			</li>
+			<li class="clearfix">
+				<div class="placeholder">
+					<span>联系人手机号</span>
+					<input type="text" />
+				</div>
+				<div class="prompt"></div>
+				<i class="cl"></i>
+				<div class="err"></div>
 			</li>
 			<li class="verify-code">
 				<div class="verify-box fl">
@@ -49,18 +78,32 @@
 						<input type="text" />
 					</div>
 					<div class="verify-img"><img src="http://www.test.diaosu.cn/captcha" alt=""></div>
+					<span class="verify-change">点击图片更换</span>
 				</div>
-				<div class="prompt">×</div>
+				<div class="prompt"></div>
 				<i class="cl"></i>
-				<div class="err">验证码输入错误</div>
+				<div class="err"></div>
+			</li>
+			<li class="agree">
+				<p><label for="xy"><input id="xy" type="checkbox" checked="checked" />我已阅读并同意<a href="#">《中国雕塑网会员注册协议》</a></label></p>
+				<p><label for="dy"><input id="dy" type="checkbox" checked="checked" />免费订阅中国雕塑网活动预告短信、邮件</label></p>
 			</li>
 			<li class="form-btn">
-				<input class="btn btn-login" type="submit" value="登    陆" />
+				<input class="btn btn-login" type="submit" value="注    册" />
 			</li>
 		</ul>
-		<div class="kf">客服：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=389774619&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:389774619:50" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></div>
+		<div class="tips">
+			<p>全国高校雕塑系、公共艺术系官方网站申请须知：</p>
+			<p>1、申请人注册前需得到院系许可和支持；</p>
+			<p>2、提交注册信息后，工作人员会发送验证所需材料和手续至联系人邮箱，并请及时回复邮件；</p>
+			<p>3、验证通过后，会发送登陆账号、密码至联系人邮箱。</p>
+		</div>
 	</div>
 </div>
-<div class="w s-footer">Copyright 2003-2014 DIAOSU.CN　All rights reserved 版权所有 中国雕塑网 苏ICP备11036881号</div>
+<div class="w s-footer">
+	<div class="kf">客服：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=389774619&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:389774619:50" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></div>
+	<p>Copyright 2003-2014 DIAOSU.CN　All rights reserved 版权所有 中国雕塑网 苏ICP备11036881号</p>
+</div>
+<script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

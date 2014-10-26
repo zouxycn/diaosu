@@ -15,55 +15,59 @@
 	<h2 class="fl">登陆中国雕塑网</h2>
 </div>
 <div class="w">
-	<div class="login-form findpwd-form">
-		<div class="pace">
-			<span class="cur">验证身份</span>
-			<em>&gt;</em>
-			<span>修改密码</span>
-			<em>&gt;</em>
-			<span>完成</span>
-		</div>
-		<ul>
-			<li class="clearfix">
-				<div class="placeholder">
-					<span>请输入用户名</span>
-					<input type="text" />
-				</div>
-				<div class="prompt"></div>
-				<i class="cl"></i>
-				<div class="err"></div>
-			</li>
-			<li class="clearfix">
-				<div class="placeholder">
-					<span>请输入手机号</span>
-					<input type="text" />
-				</div>
-				<div class="prompt"></div>
-				<i class="cl"></i>
-				<div class="err"></div>
-			</li>
-			<li class="verify-code">
-				<div class="verify-box fl">
+	<form id="validateIdentity" method="post">
+		<div class="login-form findpwd-form">
+			<div class="pace">
+				<span class="cur">验证身份</span>
+				<em>&gt;</em>
+				<span>修改密码</span>
+				<em>&gt;</em>
+				<span>完成</span>
+			</div>
+			<ul>
+				<li class="clearfix">
 					<div class="placeholder">
-						<span>验证码</span>
-						<input type="text" />
+						<span>请输入用户名</span>
+						<input type="text" name="username" />
 					</div>
-					<div class="verify-img"><img src="http://www.test.diaosu.cn/captcha" alt=""></div>
-					<span class="verify-change">点击图片更换</span>
-				</div>
-				<div class="prompt"></div>
-				<i class="cl"></i>
-				<div class="err"></div>
-			</li>
-			<li class="form-btn">
-				<input class="btn btn-login" type="submit" value="重新设置密码" />
-			</li>
-		</ul>
-	</div>
+					<div class="prompt"></div>
+					<i class="cl"></i>
+					<div class="err"></div>
+				</li>
+				<li class="clearfix">
+					<div class="placeholder">
+						<span>请输入手机号</span>
+						<input type="text" name="mobile" maxlength="11" />
+					</div>
+					<div class="prompt"></div>
+					<i class="cl"></i>
+					<div class="err"></div>
+				</li>
+				<li class="verify-code">
+					<div class="verify-box fl">
+						<div class="placeholder">
+							<span>验证码</span>
+							<input type="text" name="verifycode" maxlength="5" />
+						</div>
+						<div class="verify-img"><img src="http://www.test.diaosu.cn/captcha" alt=""></div>
+						<span class="verify-change">点击图片更换</span>
+					</div>
+					<div class="prompt"></div>
+					<i class="cl"></i>
+					<div class="err"></div>
+				</li>
+				<li class="form-btn">
+					<input class="btn btn-login" type="submit" value="重新设置密码" />
+				</li>
+			</ul>
+		</div>
+	</form>
 </div>
 <div class="w s-footer">
 	<div class="kf">客服：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=389774619&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:389774619:50" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></div>
 	<p>Copyright 2003-2014 DIAOSU.CN　All rights reserved 版权所有 中国雕塑网 苏ICP备11036881号</p>
 </div>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/entry.js"></script>
 </body>
 </html>

@@ -18,49 +18,52 @@
 	</div>
 </div>
 <div class="w">
-	<div class="login-form">
-		<ul>
-			<li class="clearfix">
-				<div class="placeholder">
-					<span>请输入用户名/邮箱</span>
-					<input type="text" />
-				</div>
-				<div class="prompt">×</div>
-				<i class="cl"></i>
-				<div class="err">用户名或邮箱不存在</div>
-			</li>
-			<li class="clearfix">
-				<div class="placeholder">
-					<span>请输入密码</span>
-					<input type="password" />
-				</div>
-				<div class="prompt">√</div>
-				<i class="cl"></i>
-				<div class="err">密码输入错误</div>
-			</li>
-			<li class="verify-code">
-				<div class="verify-box fl">
+	<form id="loginForm" method="get">
+		<div class="login-form">
+			<ul>
+				<li class="clearfix">
 					<div class="placeholder">
-						<span>验证码</span>
-						<input type="text" />
+						<span>请输入用户名/邮箱</span>
+						<input id="username" name="username" type="text" />
 					</div>
-					<div class="verify-img"><img src="http://www.test.diaosu.cn/captcha" alt=""></div>
-					<span class="verify-change">点击图片更换</span>
-				</div>
-				<div class="prompt">×</div>
-				<i class="cl"></i>
-				<div class="err">验证码输入错误</div>
-			</li>
-			<li class="form-btn">
-				<input class="btn btn-login" type="submit" value="登    陆" />
-			</li>
-		</ul>
-	</div>
+					<div class="prompt"></div>
+					<i class="cl"></i>
+					<div class="err"></div>
+				</li>
+				<li class="clearfix">
+					<div class="placeholder">
+						<span>请输入密码</span>
+						<input type="password" name="password" />
+					</div>
+					<div class="prompt"></div>
+					<i class="cl"></i>
+					<div class="err"></div>
+				</li>
+				<li class="verify-code">
+					<div class="verify-box fl">
+						<div class="placeholder">
+							<span>验证码</span>
+							<input type="text" name="verifycode" />
+						</div>
+						<div class="verify-img"><img src="http://www.test.diaosu.cn/captcha" alt=""></div>
+						<span class="verify-change">点击图片更换</span>
+					</div>
+					<div class="prompt"></div>
+					<i class="cl"></i>
+					<div class="err"></div>
+				</li>
+				<li class="form-btn">
+					<input class="btn btn-login" type="submit" value="登    陆" />
+				</li>
+			</ul>
+		</div>
+	</form>
 </div>
 <div class="w s-footer">
 	<div class="kf">客服：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=389774619&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:389774619:50" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></div>
 	<p>Copyright 2003-2014 DIAOSU.CN　All rights reserved 版权所有 中国雕塑网 苏ICP备11036881号</p>
 </div>
-<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/entry.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@ DS.entry = {
 		this.getVerifyCode();
 		this.validateLogin();
 		this.validateIdentity();
+		this.validateChangePwd();
 	},
 	getVerifyCode:function(){
 		var _box = $(".regist-form"),
@@ -58,6 +59,49 @@ DS.entry = {
 		});
 	},
 	validateIdentity:function(){
+		$("#validateIdentity").validate({
+			errorPlacement:function(error, element){
+				var _p = element.parent().parent();
+				if(_p.hasClass("verify-box"))
+				{
+					error.appendTo(_p.parent().find(".err"));
+					_p.parent().find(".prompt").text("×");
+				}
+				else
+				{
+					error.appendTo(_p.find(".err"));
+					_p.find(".prompt").text("×");
+				}
+				
+				
+			},
+			rules:{
+				username:"required",
+				mobile:{
+					required:true,
+					number:true,
+					rangelength:[11,11]
+				},
+				verifycode:"required"
+			},
+			messages:{
+				username:"请输入用户名",
+				mobile:{
+					required:"请输入手机号",
+					number:"请输入正确的手机号",
+					rangelength:"请输入正确的手机号"
+				},
+				verifycode:"请输入验证码"
+			},
+			submitHandler:function(){
+				alert("submitted!");
+			},
+			success: function(element) {
+				element.parent().parent().find(".prompt").text("√");
+			}
+		});
+	},
+	validateChangePwd:function(){
 		$("#validateIdentity").validate({
 			errorPlacement:function(error, element){
 				var _p = element.parent().parent();

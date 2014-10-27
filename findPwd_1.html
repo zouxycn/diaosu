@@ -5,7 +5,7 @@
 <title>手机找回密码-中国雕塑网</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 <link type="text/css" rel="stylesheet" href="css/common.css" />
-<link type="text/css" rel="stylesheet" href="css/login.css" />
+<link type="text/css" rel="stylesheet" href="css/entry.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/base.js"></script>
 </head>
@@ -28,7 +28,7 @@
 				<li class="clearfix">
 					<div class="placeholder">
 						<span>请输入用户名</span>
-						<input type="text" name="username" />
+						<input type="text" name="username" datatype="/^[a-zA-Z0-9_]{6,12}$/" errormsg="请输入6-12位英文字符、数字、下划线" nullmsg="请输入用户名" sucmsg=" " />
 					</div>
 					<div class="prompt"></div>
 					<i class="cl"></i>
@@ -37,7 +37,7 @@
 				<li class="clearfix">
 					<div class="placeholder">
 						<span>请输入手机号</span>
-						<input type="text" name="mobile" maxlength="11" />
+						<input type="text" name="mobile" maxlength="11" datatype="m" errormsg="请正确输入手机号" nullmsg="请输入手机号" sucmsg=" " />
 					</div>
 					<div class="prompt"></div>
 					<i class="cl"></i>
@@ -47,7 +47,7 @@
 					<div class="verify-box fl">
 						<div class="placeholder">
 							<span>验证码</span>
-							<input type="text" name="verifycode" maxlength="5" />
+							<input type="text" name="verifycode" maxlength="5" datatype="/^[a-zA-Z0-9]{5}$/" errormsg="请正确输入验证码" nullmsg="请输入验证码" sucmsg=" " />
 						</div>
 						<div class="verify-img"><img src="http://www.test.diaosu.cn/captcha" alt=""></div>
 						<span class="verify-change">点击图片更换</span>
@@ -67,7 +67,7 @@
 	<div class="kf">客服：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2332824284&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2332824284:51" alt="中国雕塑网在线客服：小黄" title="中国雕塑网在线客服：小黄"/></a></div>
 	<p>Copyright 2003-2014 DIAOSU.CN　All rights reserved 版权所有 中国雕塑网 苏ICP备11036881号</p>
 </div>
-<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/Validform.min.js"></script>
 <script type="text/javascript" src="js/entry.js"></script>
 </body>
 </html>

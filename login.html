@@ -5,7 +5,7 @@
 <title>登录-中国雕塑网</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 <link type="text/css" rel="stylesheet" href="css/common.css" />
-<link type="text/css" rel="stylesheet" href="css/login.css" />
+<link type="text/css" rel="stylesheet" href="css/entry.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/base.js"></script>
 </head>
@@ -44,7 +44,7 @@
 					<div class="verify-box fl">
 						<div class="placeholder">
 							<span>验证码</span>
-							<input type="text" name="verifycode" maxlength="5" datatype="*5-5" errormsg="请输入5位的验证码" nullmsg="请输入验证码" sucmsg=" " />
+							<input type="text" name="verifycode" maxlength="5" datatype="/^[a-zA-Z0-9]{5}$/" errormsg="请正确输入验证码" nullmsg="请输入验证码" sucmsg=" " />
 						</div>
 						<div class="verify-img"><img src="http://www.test.diaosu.cn/captcha" alt=""></div>
 						<span class="verify-change">点击图片更换</span>

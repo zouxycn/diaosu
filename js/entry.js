@@ -4,8 +4,9 @@ DS.entry = {
 		this.getVerifyCode();
 		this.agreeCheck();
 		this.validateLogin();
-		//this.validateIdentity();
-		//this.validateChangePwd();
+		this.validateIdentity();
+		this.validateChangePwd();
+		this.registPerson();
 	},
 	getVerifyCode:function(){
 		var _box = $(".regist-form"),
@@ -36,7 +37,9 @@ DS.entry = {
 		});
 	},
 	validateLogin:function(){
-		$("#loginForm").Validform({
+		var _form = $("#loginForm");
+		if(_form.length < 1) return;
+		_form.Validform({
 			tiptype:function(msg,o,cssctl){
 				var _p = o.obj.parent().parent();
 				var _err;
@@ -70,86 +73,145 @@ DS.entry = {
 		});
 	},
 	validateIdentity:function(){
-		$("#validateIdentity").validate({
-			errorPlacement:function(error, element){
-				var _p = element.parent().parent();
+		var _form = $("#validateIdentity");
+		if(_form.length < 1) return;
+		_form.Validform({
+			tiptype:function(msg,o,cssctl){
+				var _p = o.obj.parent().parent();
+				var _err;
+				var _prompt;
+				switch(o.type)
+				{
+					case 3:
+						_prompt = "×"
+						break;
+					case 2:
+						_prompt = "√"
+						break;
+				}
 				if(_p.hasClass("verify-box"))
 				{
-					error.appendTo(_p.parent().find(".err"));
-					_p.parent().find(".prompt").text("×");
+					_err = _p.parent().find(".err");
+					_p.parent().find(".prompt").text(_prompt);
 				}
 				else
 				{
-					error.appendTo(_p.find(".err"));
-					_p.find(".prompt").text("×");
+					_err = _p.find(".err");
+					_p.find(".prompt").text(_prompt);
 				}
-				
-				
+				cssctl(_err,o.type);
+				_err.text(msg);
 			},
-			rules:{
-				username:"required",
-				mobile:{
-					required:true,
-					number:true,
-					rangelength:[11,11]
-				},
-				verifycode:"required"
-			},
-			messages:{
-				username:"请输入用户名",
-				mobile:{
-					required:"请输入手机号",
-					number:"请输入正确的手机号",
-					rangelength:"请输入正确的手机号"
-				},
-				verifycode:"请输入验证码"
-			},
-			submitHandler:function(){
-				alert("submitted!");
-			},
-			success: function(element) {
-				element.parent().parent().find(".prompt").text("√");
+			callback:function(form){
+				alert("submitted")
+				return false;
 			}
 		});
 	},
 	validateChangePwd:function(){
-		$("#validateChangePwd").validate({
-			errorPlacement:function(error, element){
-				var _p = element.parent().parent();
+		var _form = $("#validateChangePwd");
+		if(_form.length < 1) return;
+		var _getVerifyBtn = _form.find(".getverify-btn"),
+			_coutnDownBox = _form.find(".count-down");
+		var _countDown = DS.widget("CountDown",{
+			box:_coutnDownBox,
+			seconds:10,
+			txt:_coutnDownBox.find(".s"),
+			callback:function(){
+				_coutnDownBox.addClass("hide");
+				_getVerifyBtn.removeClass("hide");
+
+				_getVerifyBtn.on("click",function(){
+					//添加获取手机验证码ajax
+					_coutnDownBox.removeClass("hide");
+					_getVerifyBtn.addClass("hide");
+					_countDown.reset(60);
+				});
+			}
+		});
+		_form.Validform({
+			tiptype:function(msg,o,cssctl){
+				var _p = o.obj.parent().parent();
+				var _err;
+				var _prompt;
+				switch(o.type)
+				{
+					case 3:
+						_prompt = "×"
+						break;
+					case 2:
+						_prompt = "√"
+						break;
+				}
 				if(_p.hasClass("verify-box"))
 				{
-					error.appendTo(_p.parent().find(".err"));
-					_p.parent().find(".prompt").text("×");
+					_err = _p.parent().find(".err");
+					_p.parent().find(".prompt").text(_prompt);
 				}
 				else
 				{
-					error.appendTo(_p.find(".err"));
-					_p.find(".prompt").text("×");
+					_err = _p.find(".err");
+					_p.find(".prompt").text(_prompt);
 				}
-				
-				
+				cssctl(_err,o.type);
+				_err.text(msg);
 			},
-			rules:{
-				password:"required",
-				password2:{
-					required:true,
-					equalTo:"#pwd"
-				},
-				verifycode:"required"
+			callback:function(form){
+				alert("submitted")
+				return false;
+			}
+		});
+	},
+	registPerson:function(){
+		var _form = $("#registPerson");
+		if(_form.length < 1) return;
+		_form.find("input").on({
+			focusin:function(){
+				var _p = $(this).parent().parent();
+				_p.find(".err").addClass("hide");
+				_p.find(".info").removeClass("hide");
 			},
-			messages:{
-				password:"请输入新密码",
-				password2:{
-					required:"请重新输入密码",
-					equalTo:"重新输入的密码应与上面密码相同"
-				},
-				verifycode:"请输入验证码"
+			focusout:function(){
+				var _p = $(this).parent().parent();
+				_p.find(".err").removeClass("hide");
+				_p.find(".info").addClass("hide");
+			}
+		});
+
+		_form.Validform({
+			btnSubmit:".btn-login",
+			tiptype:function(msg,o,cssctl){
+				var _p = o.obj.parent().parent();
+				var _err;
+				var _prompt;
+				switch(o.type)
+				{
+					case 3:
+						_prompt = "×"
+						break;
+					case 2:
+						_prompt = "√"
+						break;
+				}
+				if(_p.hasClass("verify-box"))
+				{
+					_err = _p.parent().find(".err");
+					_p.parent().find(".prompt").text(_prompt);
+				}
+				else
+				{
+					_err = _p.find(".err");
+					_p.find(".prompt").text(_prompt);
+				}
+				cssctl(_err,o.type);
+				_err.text(msg);
 			},
-			submitHandler:function(){
-				alert("submitted!");
+			callback:function(form){
+				alert("submitted")
+				return false;
 			},
-			success: function(element) {
-				element.parent().parent().find(".prompt").text("√");
+			submitForm:function(){
+				alert("aaa")
 			}
 		});
 	}

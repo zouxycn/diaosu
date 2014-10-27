@@ -499,6 +499,52 @@ var DS = (function($){
         }
     };
 
+    _DS.widget.CountDown = function(opt){
+        this.opt = opt || {};
+        this.box = this.opt.box;
+        this.seconds = this.opt.seconds || 60;
+        this.txt = this.opt.txt;
+        this.callback = this.opt.callback || function(){};
+        this.init();
+    };
+
+    _DS.widget.CountDown.prototype = {
+        init:function(){
+            var _this = this;
+            _this.showTime(_this.seconds);
+            _this.timer = setInterval(function(){
+                _this.onTimer();
+            },1000);
+        },
+        onTimer:function(){
+            var _this = this;
+            _this.seconds --;
+            if(_this.seconds < 0)
+            {
+                _this.callback();
+                clearInterval(_this.timer);
+                _this.timer = null;
+                return;
+            }
+            _this.showTime(_this.seconds);
+        },
+        showTime:function(t){
+            var _this = this,
+                _box = $(_this.box),
+                _txt = _box.find(_this.txt);
+
+            _txt.text(t);
+        },
+        reset:function(t){
+            var _this = this;
+            _this.seconds = t;
+            _this.showTime(_this.seconds);
+            _this.timer = setInterval(function(){
+                _this.onTimer();
+            },1000);
+        }
+    };
+
 
     _DS.common = {
         init:function(){

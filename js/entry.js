@@ -180,6 +180,7 @@ DS.entry = {
 
 		_form.Validform({
 			btnSubmit:".btn-login",
+			postonce:true,
 			tiptype:function(msg,o,cssctl){
 				var _p = o.obj.parent().parent();
 				var _err;
@@ -207,8 +208,15 @@ DS.entry = {
 				_err.text(msg);
 			},
 			callback:function(form){
-				alert("submitted")
-				return false;
+				var _this = this;
+				form.find(_this.btnSubmit).on("click",function(){
+					if(!$(this).hasClass("btn-login-disabled"))
+					{
+						alert("submitted11111111111");
+
+					}
+					return false;
+				});
 			},
 			submitForm:function(){
 				alert("aaa")

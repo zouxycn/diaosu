@@ -20,7 +20,7 @@
 .login-form .verify-img{display:inline;float:left;width:120px;height:30px;margin:2px 10px 0 12px;cursor:pointer;}
 .login-form .verify-change{float:left;width:36px;line-height:14px;margin-top:2px;}
 .login-form .form-btn{padding-top:24px;}
-.login-form .btn-login{display:block;width:362px;height:70px;border:0 none;border-radius:5px;background:#D2334F none;color:#FFF;font:24px/70px "microsoft yahei";cursor:pointer;}
+.login-form .btn-login{display:block;width:362px;height:70px;border:0 none;border-radius:5px;background:#D2334F none;text-align:center;color:#FFF;font:24px/70px "microsoft yahei";cursor:pointer;}
 .login-form .btn-login-disabled{background-color: #7A7A7A;}
 .login-form .kf{margin-top:36px;}
 .login-form .err,.login-form .info{height:15px;line-height:15px;color:#D2334F;}

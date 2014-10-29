@@ -555,6 +555,10 @@ var DS = (function($){
             $(".placeholder").each(function(){
                 var _ph = $(this).find("span");
                 var _ipt = $(this).find("input");
+                if(_ipt.val()!="")
+                {
+                    _ph.addClass("hide");
+                }
                 _ph.bind("click",function(){
                     _ph.addClass("hide");
                     _ipt.focus();

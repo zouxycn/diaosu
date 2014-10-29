@@ -1,28 +1,20 @@
 var DS = DS || {};
 DS.entry = {
 	init:function(){
-		this.getVerifyCode();
+		this.changeVerifyImg();
 		this.agreeCheck();
 		this.validateLogin();
 		this.validateIdentity();
 		this.validateChangePwd();
 		this.registPerson();
+		this.registSchool();
 	},
-	getVerifyCode:function(){
-		var _box = $(".regist-form"),
-			_verifyBox = _box.find(".get-verify"),
-			_btn = _box.find(".getverify-btn"),
-			_verifyCloseBtn = _verifyBox.find(".close-btn"),
-			_input = _verifyBox.find("input");
-
-		_btn.on("click",function(){
-			_verifyBox.removeClass("hide");
-			_input.val('');
-			_input.prev().removeClass("hide");
-		});
-
-		_verifyCloseBtn.on("click",function(){
-			_verifyBox.addClass("hide");
+	changeVerifyImg:function(){
+		var _img = $(".verify-img").find("img");
+		var _osrc = _img.attr("src");
+		if(_img.length < 1) return;
+		_img.on("click",function(){
+			_img.attr("src",_osrc+"?t="+new Date().getTime());
 		});
 	},
 	agreeCheck:function(){
@@ -65,10 +57,6 @@ DS.entry = {
 				}
 				cssctl(_err,o.type);
 				_err.text(msg);
-			},
-			callback:function(form){
-				alert("submitted")
-				return false;
 			}
 		});
 	},
@@ -101,10 +89,6 @@ DS.entry = {
 				}
 				cssctl(_err,o.type);
 				_err.text(msg);
-			},
-			callback:function(form){
-				alert("submitted")
-				return false;
 			}
 		});
 	},
@@ -115,17 +99,33 @@ DS.entry = {
 			_coutnDownBox = _form.find(".count-down");
 		var _countDown = DS.widget("CountDown",{
 			box:_coutnDownBox,
-			seconds:10,
+			seconds:60,
 			txt:_coutnDownBox.find(".s"),
 			callback:function(){
 				_coutnDownBox.addClass("hide");
-				_getVerifyBtn.removeClass("hide");
+				_getVerifyBtn.removeClass("hide").text("重发");
 
 				_getVerifyBtn.on("click",function(){
 					//添加获取手机验证码ajax
-					_coutnDownBox.removeClass("hide");
-					_getVerifyBtn.addClass("hide");
-					_countDown.reset(60);
+					$.ajax({
+			            url: "data/getVerifycode.json",
+			            type: "POST",
+			            dataType: "json",
+			            beforeSend: function() {
+			               
+			            },
+			            success: function() {
+			            	_coutnDownBox.removeClass("hide");
+							_getVerifyBtn.addClass("hide");
+							_countDown.reset(60);
+			            },
+			            error: function(req,status,err) {
+			            	alert("网络连接失败，请检测您的网络环境稍后重试");
+			            },
+			            complete: function() {
+			            }
+			        });
+					
 				});
 			}
 		});
@@ -155,15 +155,114 @@ DS.entry = {
 				}
 				cssctl(_err,o.type);
 				_err.text(msg);
-			},
-			callback:function(form){
-				alert("submitted")
-				return false;
 			}
 		});
 	},
 	registPerson:function(){
-		var _form = $("#registPerson");
+		var _form = $("#registPerson"),
+			_verifyBox = _form.find(".get-verify"),
+			_btn = _form.find(".getverify-btn"),
+			_verifyCloseBtn = _verifyBox.find(".close-btn"),
+			_input = _verifyBox.find("input"),
+			_coutnDownBox = _form.find(".count-down");
+		if(_form.length < 1) return;
+		_form.find("input").on({
+			focusin:function(){
+				var _p = $(this).parent().parent();
+				_p.find(".err").addClass("hide");
+				_p.find(".info").removeClass("hide");
+			},
+			focusout:function(){
+				var _p = $(this).parent().parent();
+				_p.find(".err").removeClass("hide");
+				_p.find(".info").addClass("hide");
+			}
+		});
+
+		_btn.on("click",function(){
+			var _verifyImgInput = _verifyBox.find(".placeholder").find("input");
+			var _verifyImgErr= _verifyBox.find(".err");
+			_verifyBox.removeClass("hide");
+			_input.val('');
+			_verifyImgErr.text('');
+			_input.prev().removeClass("hide");
+			_verifyBox.find(".get-verify-btn").on("click",function(){
+				if(_verifyImgInput.val()=="")
+				{
+					_verifyImgErr.text("请输入验证码");
+					_verifyImgInput.focus();
+					return false;
+				}
+				$.ajax({
+		            url: "data/getVerifycode.json",
+		            type: "POST",
+		            dataType: "json",
+		            beforeSend: function() {
+		               
+		            },
+		            success: function() {
+		            	_verifyBox.addClass("hide");
+		            	_btn.addClass("hide");
+		            	_coutnDownBox.removeClass("hide");
+		            	var _countDown = DS.widget("CountDown",{
+							box:_coutnDownBox,
+							seconds:60,
+							txt:_coutnDownBox.find(".s"),
+							callback:function(){
+								_coutnDownBox.addClass("hide");
+								_btn.removeClass("hide").text("重发");
+							}
+						});
+		            },
+		            error: function(req,status,err) {
+		            	alert("网络连接失败，请检测您的网络环境稍后重试");
+		            },
+		            complete: function() {
+		            }
+		        });
+		        return false;
+			});
+		});
+
+		_verifyCloseBtn.on("click",function(){
+			_verifyBox.addClass("hide");
+		});
+		_form.Validform({
+			btnSubmit:".btn-login",
+			tiptype:function(msg,o,cssctl){
+				var _p = o.obj.parent().parent();
+				var _err;
+				var _prompt;
+				switch(o.type)
+				{
+					case 3:
+						_prompt = "×"
+						break;
+					case 2:
+						_prompt = "√"
+						break;
+				}
+				if(_p.hasClass("verify-box"))
+				{
+					_err = _p.parent().find(".err");
+					_p.parent().find(".prompt").text(_prompt);
+				}
+				else
+				{
+					_err = _p.find(".err");
+					_p.find(".prompt").text(_prompt);
+				}
+				cssctl(_err,o.type);
+				_err.text(msg);
+			},
+			beforeSubmit:function(form){
+				var _this = this;
+				if(form.find(".btn-login").hasClass("btn-login-disabled")) return false;
+			}
+		});
+	},
+	registSchool:function(){
+		var _form = $("#registSchool");
 		if(_form.length < 1) return;
 		_form.find("input").on({
 			focusin:function(){
@@ -180,7 +279,6 @@ DS.entry = {
 
 		_form.Validform({
 			btnSubmit:".btn-login",
-			postonce:true,
 			tiptype:function(msg,o,cssctl){
 				var _p = o.obj.parent().parent();
 				var _err;
@@ -207,19 +305,9 @@ DS.entry = {
 				cssctl(_err,o.type);
 				_err.text(msg);
 			},
-			callback:function(form){
+			beforeSubmit:function(form){
 				var _this = this;
-				form.find(_this.btnSubmit).on("click",function(){
-					if(!$(this).hasClass("btn-login-disabled"))
-					{
-						alert("submitted11111111111");
-
-					}
-					return false;
-				});
-			},
-			submitForm:function(){
-				alert("aaa")
+				if(form.find(".btn-login").hasClass("btn-login-disabled")) return false;
 			}
 		});
 	}

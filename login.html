@@ -14,17 +14,17 @@
 	<div class="logo fl"><a href="#"><img src="images/slogo.png" /></a></div>
 	<h2 class="fl">登陆中国雕塑网</h2>
 	<div class="regist-entry fr">
-		还没有账号，现在就<a href="#">注册</a>
+		还没有账号，现在就<a href="regist_person.html">注册</a>
 	</div>
 </div>
 <div class="w">
-	<form id="loginForm" method="post">
+	<form id="loginForm" method="post" action="login.php">
 		<div class="login-form">
 			<ul>
 				<li class="clearfix">
 					<div class="placeholder">
 						<span>请输入用户名</span>
-						<input id="username" name="username" type="text" datatype="/^[a-zA-Z0-9_]{6,12}$/" errormsg="请输入6-12位英文字符、数字、下划线" nullmsg="请输入用户名" sucmsg=" " />
+						<input id="username" name="username" type="text" datatype="/^[a-zA-Z0-9_]{6,12}$/"  errormsg="请输入6-12位英文字符、数字、下划线" nullmsg="请输入用户名" sucmsg=" " />
 					</div>
 					<div class="prompt"></div>
 					<i class="cl"></i>

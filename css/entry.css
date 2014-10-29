@@ -24,6 +24,7 @@
 .login-form .btn-login-disabled{background-color: #7A7A7A;}
 .login-form .kf{margin-top:36px;}
 .login-form .err,.login-form .info{height:15px;line-height:15px;color:#D2334F;}
+.login-form .Validform_right{color:#71b83d;}
 .login-form .info{color:#7A7A7A;}
 .findpwd-form{margin-top:0;}
 .findpwd-form .pace{height:60px;line-height:60px;padding-left:5px;font-size:16px;color:#7A7A7A;font-family:"microsoft yahei";}

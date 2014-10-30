@@ -170,3 +170,17 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .article-rank a{float: left;width:165px;height:24px;line-height:24px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
 .article-rank .rclick{float: right;line-height:24px;}
 .article-rank .cur .rclick{color:#CB2F4B;}
+
+
+
+/* member-user */
+.smenu-user ul{width:980px;}
+.smenu li a{margin:0 32px;}
+.header-user{position:relative;}
+.header-user img{width:980px;height:250px;}
+.header-user .user-info{position:absolute;top:60px;left:60px;padding:12px 15px;min-width:194px;}
+.header-user dl{position:relative;z-index:2;}
+.header-user dt{height:32px;font-family:"microsoft yahei";color:#000;font-weight:700;}
+.header-user dt strong{float:left;line-height:32px;margin-right:18px;font-size:24px;}
+.header-user dt span{float:left;margin-top:10px;line-height:23px;font-size:12px;}
+.header-user .mask{position:absolute;width:100%;height:100%;top:0;left:0;background-color:#FFF;opacity:0.6;filter:alpha(opacity=60);}

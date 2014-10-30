@@ -96,7 +96,8 @@ DS.entry = {
 		var _form = $("#validateChangePwd");
 		if(_form.length < 1) return;
 		var _getVerifyBtn = _form.find(".getverify-btn"),
-			_coutnDownBox = _form.find(".count-down");
+			_coutnDownBox = _form.find(".count-down"),
+			_ajaxUrl = _form.find("#verifyMsg").attr("data-url");;
 		var _countDown = DS.widget("CountDown",{
 			box:_coutnDownBox,
 			seconds:60,
@@ -108,7 +109,7 @@ DS.entry = {
 				_getVerifyBtn.on("click",function(){
 					//添加获取手机验证码ajax
 					$.ajax({
-			            url: "data/getVerifycode.json",
+			            url: _ajaxUrl,
 			            type: "POST",
 			            dataType: "json",
 			            beforeSend: function() {
@@ -182,6 +183,7 @@ DS.entry = {
 		_btn.on("click",function(){
 			var _verifyImgInput = _verifyBox.find(".placeholder").find("input");
 			var _verifyImgErr= _verifyBox.find(".err");
+			var _ajaxUrl = _form.find("#verifyMsg").attr("data-url");
 			_verifyBox.removeClass("hide");
 			_input.val('');
 			_verifyImgErr.text('');
@@ -194,7 +196,7 @@ DS.entry = {
 					return false;
 				}
 				$.ajax({
-		            url: "data/getVerifycode.json",
+		            url: _ajaxUrl,
 		            type: "POST",
 		            dataType: "json",
 		            beforeSend: function() {

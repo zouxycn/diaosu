@@ -24,8 +24,8 @@ DS.entry = {
 		var _ck1 = _box.find("#xy");
 		var _ck2 = _box.find("#dy");
 		var _btn = $(".regist-form").find(".btn-login");
-		_checkbox.on("click",function(){
-			_ck1[0].checked && _ck2[0].checked ? _btn.removeClass("btn-login-disabled"):_btn.addClass("btn-login-disabled");
+		_ck1.on("click",function(){
+			_ck1[0].checked ? _btn.removeClass("btn-login-disabled"):_btn.addClass("btn-login-disabled");
 		});
 	},
 	validateLogin:function(){

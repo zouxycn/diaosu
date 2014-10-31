@@ -97,28 +97,40 @@ DS.entry = {
 		if(_form.length < 1) return;
 		var _getVerifyBtn = _form.find(".getverify-btn"),
 			_coutnDownBox = _form.find(".count-down"),
-			_ajaxUrl = _form.find("#verifyMsg").attr("data-url");;
+			_ajaxUrl = _form.find("#verifyMsg").attr("data-url"),
+			_verifyErr = _form.find(".verify-code").find(".err");
 		var _countDown = DS.widget("CountDown",{
 			box:_coutnDownBox,
-			seconds:60,
+			seconds:5,
 			txt:_coutnDownBox.find(".s"),
 			callback:function(){
 				_coutnDownBox.addClass("hide");
 				_getVerifyBtn.removeClass("hide").text("重发");
 
-				_getVerifyBtn.on("click",function(){
+				_getVerifyBtn.off().on("click",function(){
 					//添加获取手机验证码ajax
 					$.ajax({
 			            url: _ajaxUrl,
-			            type: "POST",
-			            dataType: "json",
+			            type: "GET",
 			            beforeSend: function() {
 			               
 			            },
-			            success: function() {
-			            	_coutnDownBox.removeClass("hide");
-							_getVerifyBtn.addClass("hide");
-							_countDown.reset(60);
+			            success: function(data) {
+			            	if(data.status == "y")
+			            	{
+			            		_coutnDownBox.removeClass("hide");
+								_getVerifyBtn.addClass("hide");
+								_countDown.reset(5);
+			            	}
+			            	else if(data.status == "n")
+			            	{
+			            		_verifyErr.text(data.info);
+			            	}
+			            	else
+			            	{
+			            		_verifyErr.text("未知错误");
+			            	}
+			            	
 			            },
 			            error: function(req,status,err) {
 			            	alert("网络连接失败，请检测您的网络环境稍后重试");
@@ -126,7 +138,7 @@ DS.entry = {
 			            complete: function() {
 			            }
 			        });
-					
+					return false;
 				});
 			}
 		});
@@ -165,7 +177,8 @@ DS.entry = {
 			_btn = _form.find(".getverify-btn"),
 			_verifyCloseBtn = _verifyBox.find(".close-btn"),
 			_input = _verifyBox.find("input"),
-			_coutnDownBox = _form.find(".count-down");
+			_coutnDownBox = _form.find(".count-down"),
+			_mobile = _form.find("input[name=mobile]");
 		if(_form.length < 1) return;
 		_form.find("input").on({
 			focusin:function(){
@@ -180,7 +193,13 @@ DS.entry = {
 			}
 		});
 
-		_btn.on("click",function(){
+		_btn.off().on("click",function(e){
+			if(_mobile.val()=="")
+			{
+				_mobile.focus();
+				_mobile.parent().parent().find(".prompt").text("×");
+				return;
+			}
 			var _verifyImgInput = _verifyBox.find(".placeholder").find("input");
 			var _verifyImgErr= _verifyBox.find(".err");
 			var _ajaxUrl = _form.find("#verifyMsg").attr("data-url");
@@ -188,7 +207,7 @@ DS.entry = {
 			_input.val('');
 			_verifyImgErr.text('');
 			_input.prev().removeClass("hide");
-			_verifyBox.find(".get-verify-btn").on("click",function(){
+			_verifyBox.find(".get-verify-btn").off().on("click",function(){
 				if(_verifyImgInput.val()=="")
 				{
 					_verifyImgErr.text("请输入验证码");
@@ -198,23 +217,35 @@ DS.entry = {
 				$.ajax({
 		            url: _ajaxUrl,
 		            type: "POST",
-		            dataType: "json",
+		            data: "mobile="+_mobile.val()+"&captcha="+_input.val(),
 		            beforeSend: function() {
 		               
 		            },
-		            success: function() {
-		            	_verifyBox.addClass("hide");
-		            	_btn.addClass("hide");
-		            	_coutnDownBox.removeClass("hide");
-		            	var _countDown = DS.widget("CountDown",{
-							box:_coutnDownBox,
-							seconds:60,
-							txt:_coutnDownBox.find(".s"),
-							callback:function(){
-								_coutnDownBox.addClass("hide");
-								_btn.removeClass("hide").text("重发");
-							}
-						});
+		            success: function(data) {
+		            	if(data.status == "y")
+		            	{
+		            		_verifyBox.addClass("hide");
+			            	_btn.addClass("hide");
+			            	_coutnDownBox.removeClass("hide");
+			            	var _countDown = DS.widget("CountDown",{
+								box:_coutnDownBox,
+								seconds:5,
+								txt:_coutnDownBox.find(".s"),
+								callback:function(){
+									_coutnDownBox.addClass("hide");
+									_btn.removeClass("hide").text("重发");
+								}
+							});
+		            	}
+		            	else if(data.status == "n")
+		            	{
+		            		_verifyImgErr.text(data.info);
+		            	}
+		            	else
+		            	{
+		            		_verifyImgErr.text("未知错误");
+		            	}
+		            	
 		            },
 		            error: function(req,status,err) {
 		            	alert("网络连接失败，请检测您的网络环境稍后重试");
@@ -224,6 +255,7 @@ DS.entry = {
 		        });
 		        return false;
 			});
+			return false;
 		});
 
 		_verifyCloseBtn.on("click",function(){

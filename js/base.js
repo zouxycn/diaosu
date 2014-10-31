@@ -608,9 +608,7 @@ var DS = (function($){
                     _goTop.hide();
                 }
             });
-            _goTop.find("a").bind("click",function(){
-                $("html,body").animate({scrollTop:"0"});
-            });
+            
         }
     }
 

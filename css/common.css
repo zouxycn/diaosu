@@ -108,3 +108,5 @@ p{color:#4A4A4A;}
 .gotop .code p{height:30px;line-height:30px;font-family:"microsoft yahei";color:#000;}
 .gotop a p{color:#000;}
 .gotop a:hover .code{display:block;}
+
+.content{position: relative;}

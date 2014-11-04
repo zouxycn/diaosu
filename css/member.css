@@ -89,7 +89,7 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .work-show-channel .school-list .sl-item:hover,.work-show-channel .school-list .sl-item-hover{height:192px;}
 .work-show-channel .school-list .sl-item strong{height:17px;line-height:17px;margin-top:8px;font-family: "microsoft yahei";}
 .work-show-channel .school-list .sl-item:hover strong,.work-show-channel .school-list .sl-item-hover strong{margin-top:9px;}
-.work-show-channel .school-list .sl-item p{height:19px;line-height:19px;} 
+.work-show-channel .school-list .sl-item p,.work-show-channel .school-list .sl-item:hover p,.work-show-channel .school-list .sl-item-hover p{height:19px;line-height:19px;text-align:center;text-indent:0;} 
 
 .filter-box{padding:4px 18px 22px 18px;}
 .filter-box .bread{position:relative;height:30px;line-height:30px;}
@@ -186,7 +186,8 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 
 .work-show-user{height:240px;}
 .work-show-user .school-list .sl-item{height:174px;margin-right:23px;margin-bottom:0;}
-.work-show-user .school-list .sl-item strong{height:26px;line-height:26px;margin-top:4px;font-size:14px;font-family:"microsoft yahei";}
+.work-show-user .school-list .sl-item:hover,.work-show-user .school-list .sl-item-hover{height:172px;}
+.work-show-user .school-list .sl-item strong{height:26px;line-height:26px;font-size:14px;font-family:"microsoft yahei";}
 .work-show-user .school-list .sl-item:hover strong{color:#000;}
 .work-show-user .school-list .sl-item .ws-img{height:142px;+font-size: 93px;_font-size: 118px;}
 
@@ -231,7 +232,7 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .user-bread .gt{margin:0 6px;}
 
 .content .user-left{float:left;position: relative;margin-top:0;border-bottom:0 none;border-radius:4px 4px 0 0;}
-.content .user-right{float:right;width:680px;margin-top:0;padding:0 15px 32px 15px;}
+.content .user-right{position: relative;float:right;width:680px;min-height:668px;margin-top:0;padding:0 15px 32px 15px;_height:668px;}
 .user-leftbg{position: absolute;width:263px;top:0;left:0;right:0;bottom:0;border:1px solid #E1E1E1;border-radius:4px;background-color: #FFF;border-radius:4px;}
 .user-anchor{position: relative;width:226px;margin:18px auto 0;z-index: 2;}
 .user-anchor a{display: block;height:28px;background: url(images/user-anchor.png) no-repeat 210px 50%;font:14px/28px "microsoft yahei";text-indent:6px;}
@@ -262,8 +263,16 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .filter-box-userwork .ft-line{width:260px;margin:12px 0 0 0;}
 .filter-box-userwork .userwork-type{width:215px;}
 .filter-box-userwork .userwork-type .ft-tag{float: right;width:176px;}
-.filter-box-userwork .userwork-type .ft-tag a{color:#7A7A7A;margin-right:0;padding:0;}
+.filter-box-userwork .userwork-type .ft-tag a{color:#7A7A7A;margin-right:0;padding:0;cursor:pointer;}
 .filter-box-userwork .userwork-type .ft-tag a:hover{color:#D2334F;}
 .filter-box-userwork .userwork-type .ft-tag .cur{background-color: #fff;color:#000;}
 .userwork-type .ft-tag .title{float: left;width:136px;height:18px;overflow:hidden;}
 .userwork-type .ft-tag .count{float: right;width:40px;text-align:right;}
+.user-right .work-show{border:none;}
+.user-right .school-list{padding:13px 0 0 3px;}
+.user-right .work-show .school-list .sl-item{margin-right:23px;}
+.user-right .school-list .sl-item strong{height:17px;line-height:17px;margin-top:8px;font-family: "microsoft yahei";}
+.user-right .school-list .sl-item:hover strong,.user-right .school-list .sl-item-hover strong{margin-top:9px;}
+.user-right .school-list .sl-item p,.user-right .school-list .sl-item:hover p,.user-right .school-list .sl-item-hover p{height:19px;line-height:19px;text-indent:0;text-align:center;}
+.user-right .ur-page{position: absolute;width:100%;bottom: 18px;left:0;}
+.user-right .ur-page ul{padding:0 20px;}

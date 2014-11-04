@@ -47,6 +47,10 @@ a:hover{text-decoration:none;color:#d2334f;}
 .f14{font-size:14px;}
 .f16{font-size:16px;}
 .fwb{font-weight:700;}
+.floatcenter{ display:block;text-align:center;font-size:0;}
+.floatcenter-item{display:inline-block;*display:inline;*zoom:1;vertical-align:top;font-size:12px;}
+/* 让 chrome 支持 12px 以下的字体 */
+@media screen and (-webkit-min-device-pixel-ratio:0){.sl-floatcenter{-webkit-text-size-adjust:none;}}
 .justify-align{display:block;text-align:justify;text-justify:distribute-all-lines;text-align-last:justify;-moz-text-align-last:justify;-webkit-text-align-last:justify;}
 @media screen and (-webkit-min-device-pixel-ratio:0){.justify-align:after{content:".";display: inline-block;width:100%;overflow:hidden;height:0;}}
 .ico{display:inline-block;}
@@ -92,7 +96,7 @@ p{color:#4A4A4A;}
 .owl-controls .owl-page{display:inline-block;}
 
 .pagination{text-align: center;}
-.pagination li{display:inline-block;_float:left;_margin:0 2px;}
+.pagination li{display:inline-block;*float:left;*margin:0 2px;}
 .pagination li a,.pagination li span{float:left;width:26px;line-height:26px;border:1px solid #E2E2E2;border-radius:3px;background-color: #D9DFE3;font-size:14px;text-align:center;}
 .pagination .active a,.pagination .active span{background-color: #333;color:#FFF;cursor:default;}
 .pagination .disabled a,.disabled .active span{cursor:not-allowed;}

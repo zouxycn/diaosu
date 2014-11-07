@@ -236,7 +236,7 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .user-leftbg{position: absolute;width:263px;top:0;left:0;right:0;bottom:0;border:1px solid #E1E1E1;border-radius:4px;background-color: #FFF;border-radius:4px;}
 .user-anchor{position: relative;width:226px;margin:18px auto 0;z-index: 2;}
 .user-anchor a{display: block;height:28px;background: url(images/user-anchor.png) no-repeat 210px 50%;font:14px/28px "microsoft yahei";text-indent:6px;}
-.user-anchor a:hover,.user-anchor .cursor{background:#000 url(images/user-anchor-cur.png) no-repeat 210px 50%;color:#FFF;}
+.user-anchor a:hover,.user-anchor .cur{background:#000 url(images/user-anchor-cur.png) no-repeat 210px 50%;color:#FFF;}
 .user-title{height:28px;border-bottom:1px solid #CB2F4B;text-indent:8px;font:16px/28px "microsoft yahei";}
 .user-intro,.user-yearbook{margin-top:12px;}
 .user-intro dt{display:inline;float: left;width:164px;margin:7px 18px 0 0;}

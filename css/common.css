@@ -89,8 +89,9 @@ p{color:#4A4A4A;}
 .footer .copyright span{margin:0 8px;}
 .footer .f-contact{line-height:32px;color:#FFF;}
 
-.tab li{display:inline;float:left;height:24px;line-height:24px;padding:0 15px;margin-right:4px;font-size:14px;color:#000;font-family:"microsoft yahei";cursor:pointer;}
+.tab li,.tab li a{display:inline;float:left;height:24px;line-height:24px;padding:0 15px;margin-right:4px;font-size:14px;color:#000;font-family:"microsoft yahei";cursor:pointer;}
 .tab li.cur{background:#CB2F4B url(images/tab-cur.png) no-repeat 50% bottom;color:#FFF;cursor:default;}
+.tab li.cur a{color:#FFF;}
 
 .owl-controls{position:absolute;width:100%;left:0;bottom:0;}
 .owl-pagination{position:absolute;top:0;right:0;bottom:0;left:0;}

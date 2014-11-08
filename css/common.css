@@ -54,6 +54,7 @@ a:hover{text-decoration:none;color:#d2334f;}
 .justify-align{display:block;text-align:justify;text-justify:distribute-all-lines;text-align-last:justify;-moz-text-align-last:justify;-webkit-text-align-last:justify;}
 @media screen and (-webkit-min-device-pixel-ratio:0){.justify-align:after{content:".";display: inline-block;width:100%;overflow:hidden;height:0;}}
 .ico{display:inline-block;}
+.lazyOwl{background:url(carousel/AjaxLoader.gif) no-repeat 50% 50%;}
 
 p{color:#4A4A4A;}
 .box{display: inline;float:left;width:980px;margin-top:4px;border:1px solid #E1E1E1;border-radius:4px;background-color: #fff;overflow:hidden;}
@@ -61,7 +62,7 @@ p{color:#4A4A4A;}
 .header-ht{height:25px;line-height:25px;border-bottom:1px solid #D690A1;background:#d2334f url(images/repeatx.png) repeat-x 0 0;color:#FFF;font-family:"microsoft yahei";}
 .header-ht .ht-l span{margin:0 16px 0 20px;}
 .header-ht a{margin:0 16px;color:#FFF;}
-.header-ht a:hover{text-decoration:underline;}
+.header-ht a:hover{color:#FFF;text-decoration:underline;}
 .header{height:88px;border-top: 3px solid #101010;background: #111111 url(images/repeatx.png) repeat-x 0 -31px;}
 .header .logo{margin:12px 45px 0 19px;}
 .header .menu{line-height:88px;}

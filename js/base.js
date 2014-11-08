@@ -547,6 +547,7 @@ var DS = (function($){
 
 
     _DS.common = {
+        isIE6:!!window.ActiveXObject&&!window.XMLHttpRequest,
         init:function(){
             this.placeHolder();
             this.goTop();

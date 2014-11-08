@@ -233,8 +233,9 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 
 .content .user-left{float:left;position: relative;margin-top:0;border-bottom:0 none;border-radius:4px 4px 0 0;}
 .content .user-right{position: relative;float:right;width:680px;min-height:668px;margin-top:0;padding:0 15px 32px 15px;_height:668px;}
+.content .userintro-box{overflow:visible;}
 .user-leftbg{position: absolute;width:263px;top:0;left:0;right:0;bottom:0;border:1px solid #E1E1E1;border-radius:4px;background-color: #FFF;border-radius:4px;}
-.user-anchor{position: relative;width:226px;margin:18px auto 0;z-index: 2;}
+.user-anchor{position: relative;width:226px;margin:18px auto 18px;z-index: 2;}
 .user-anchor a{display: block;height:28px;background: url(images/user-anchor.png) no-repeat 210px 50%;font:14px/28px "microsoft yahei";text-indent:6px;}
 .user-anchor a:hover,.user-anchor .cur{background:#000 url(images/user-anchor-cur.png) no-repeat 210px 50%;color:#FFF;}
 .user-title{height:28px;border-bottom:1px solid #CB2F4B;text-indent:8px;font:16px/28px "microsoft yahei";}
@@ -276,3 +277,23 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizing
 .user-right .school-list .sl-item p,.user-right .school-list .sl-item:hover p,.user-right .school-list .sl-item-hover p{height:19px;line-height:19px;text-indent:0;text-align:center;}
 .user-right .ur-page{position: absolute;width:100%;bottom: 18px;left:0;}
 .user-right .ur-page ul{padding:0 20px;}
+
+.userwork-detail .img-slider{position:relative;margin-top:35px;max-height:680px;overflow:hidden;}
+.userwork-detail .img-slider .item{width:100%;text-align:center;overflow:hidden;}
+.userwork-detail .img-slider img{max-width:946px;max-height:680px;border:1px solid #E1E1E1;}
+.userwork-detail .img-slider .owl-prev{display:block;position:absolute;width:40px;height:40px;left:10px;top:50%;margin-top:-20px;background:url(carousel/arrow-l.png) no-repeat 0 0;text-indent:-9999px;}
+.userwork-detail .img-slider .owl-next{display:block;position:absolute;width:40px;height:40px;right:10px;top:50%;margin-top:-20px;background:url(carousel/arrow-r.png) no-repeat 0 0;text-indent:-9999px;}
+.owl-controls{height:100%;}
+.userwork-detail .userwork-down{width:854px;margin:0 auto;}
+.userwork-down .jiathis_style{float:right;margin-top:8px;}
+.userwork-intro h1{line-height:25px;text-align:center;font-size:14px;font-weight:700;}
+.userwork-intro p{line-height:20px;margin:6px 0 7px 0;color:#7A7A7A;}
+.userwork-intro p span{margin-right:35px;}
+.uintro-box{margin-top:10px;}
+.uintro-box h3{height:30px;border-bottom:1px solid #D2334F;font:16px/30px "microsoft yahei";}
+.uintro-box p{line-height:22px;text-indent:2em;}
+.auction span{float:left;width:25%;height:27px;line-height:27px;}
+.uintro-box .show-all{float:right;font-family:Tahoma;}
+.uintro-box .show-all .ico{display:inline-block;width:16px;height:17px;margin-left:3px;background:url(images/sprite.png) no-repeat 0 -197px;vertical-align:middle;}
+.uintro-box .show-all .ico-up{background-position:0 -222px;}
+.uintro-text{height:134px;overflow:hidden;}

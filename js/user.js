@@ -6,6 +6,8 @@ DS.user.work = {
 		this.initSlider();
 		//作品介绍显示
 		this.showAllText();
+		//回复按钮
+		this.showReplyBtn();
 	},
 	initSlider:function(){
 		$("#workSlider").owlCarousel({
@@ -61,5 +63,13 @@ DS.user.work = {
 				_txtBox.css("height","134px");
 			});
 		}
+	},
+	showReplyBtn:function(){
+		var _box = $("#userComment");
+		_box.find("li").hover(function(){
+			$(this).addClass("cur");
+		},function(){
+			$(this).removeClass("cur");
+		});
 	}
 };

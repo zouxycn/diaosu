@@ -18,13 +18,27 @@ DS.user.work = {
 			pagination : false,
 			singleItem:true,
 			autoHeight:true,
+			afterInit:function(){
+				if(DS.widget.common.isIE6){
+					var _box = $("#workSlider");
+					var _prev = _box.find(".owl-prev");
+					var _next = _box.find(".owl-next");
+					_box.find(".owl-controls").height(_box.height());
+					_prev.css("top",_box.height()*0.5);
+					_next.css("top",_box.height()*0.5);
+					//alert(_prev.css("top"))
+				}
+				
+			},
 			beforeMove:function(){
 				if(DS.widget.common.isIE6)
 				{
 					var _item = $(this.owl.owlItems[this.currentItem]);
 					var _img  = _item.find("img");
 					var _p = _img.width() / _img.height();
-
+					var _prev = $("#workSlider").find(".owl-prev");
+					var _next = $("#workSlider").find(".owl-next");
+					//alert(_prev.css("top"))
 					if(_img.width() > 946)
 					{
 						_img.css({
@@ -39,7 +53,10 @@ DS.user.work = {
 							"height":"680"
 						});
 					}
-					//alert(_img.width()+"-"+_img.height());
+
+					_prev.css("top",_img.height()*0.5);
+					_next.css("top",_img.height()*0.5)
+					//alert(_prev.css("top"))
 				}
 			}
 		});

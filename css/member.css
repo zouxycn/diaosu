@@ -283,7 +283,7 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingM
 .userwork-detail .img-slider img{max-width:946px;max-height:680px;border:1px solid #E1E1E1;}
 .userwork-detail .img-slider .owl-prev{display:block;position:absolute;width:40px;height:40px;left:10px;top:50%;margin-top:-20px;background:url(carousel/arrow-l.png) no-repeat 0 0;text-indent:-9999px;}
 .userwork-detail .img-slider .owl-next{display:block;position:absolute;width:40px;height:40px;right:10px;top:50%;margin-top:-20px;background:url(carousel/arrow-r.png) no-repeat 0 0;text-indent:-9999px;}
-.owl-controls{height:100%;}
+.img-slider .owl-controls{height:100%;}
 .userwork-detail .userwork-down{width:854px;margin:0 auto;}
 .userwork-down .jiathis_style{float:right;margin-top:8px;}
 .userwork-down .album-title{float:left;line-height:24px;margin-bottom:15px;}

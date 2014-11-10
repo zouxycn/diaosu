@@ -335,3 +335,26 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingM
 .user-exhibition .e-r h3 a:hover{color:#D2334F;}
 .user-exhibition .e-r p{line-height:22px;}
 .user-exhibition .e-r .e-persons{height:104px;overflow:hidden;}
+
+.work-show .auction-list .sl-item{width:200px;height:300px;}
+.work-show .auction-list .sl-item:hover,.work-show .school-list .sl-item-hover{width:198px;height:298px;}
+.work-show .auction-list .sl-item .ws-img{width:198px;height:198px;}
+.work-show .auction-list img{max-width:178px;max-height:178px;}
+.work-show .auction-list .sl-item p{}
+.work-show .auction-list .sl-item p span{float:left;}
+.work-show .auction-list .sl-item p .attr{width:64px;margin:0 10px 0 6px;}
+.work-show .auction-list .sl-item p .element{width:118px;overflow:hidden;_width:110px;}
+.work-show .auction-list .sl-item:hover p,.work-show .auction-list .sl-item-hover p{text-indent:0;}
+.work-show .auction-list .sl-item:hover p .attr,.work-show .auction-list .sl-item-hover p .attr{margin:0 10px 0 5px;}
+.user-right .auction-list .sl-item p,.user-right .auction-list .sl-item:hover p,.user-right .auction-list .sl-item-hover p{text-align:left;}
+.user-right .work-show .auction-list .sl-item{margin-right:36px;}
+
+.user-publish{padding-top:22px;}
+.user-publish li{display:inline;float:left;width:446px;height:225px;margin:0 19px 27px 19px;border:1px solid #E1E1E1;}
+.user-publish .p-img{display:inline;float:left;width:160px;}
+.user-publish .p-r{display:inline;float:right;width:230px;}
+.user-publish .p-r h3{height:46px;margin-bottom:5px;font:14px/46px "microsoft yahei";}
+.user-publish .p-r p{height:20px;line-height:20px;color:#7A7A7A;overflow:hidden;}
+.user-publish .p-r p span{float:left;}
+.user-publish .p-r p .attr{width:64px;margin-right:6px;}
+.user-publish .p-r p .element{width:160px;height:20px;overflow:hidden;}

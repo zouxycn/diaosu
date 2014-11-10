@@ -384,3 +384,14 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingM
 .school-brief .sb-con dd{height:16px;margin-bottom:16px;font:14px/16px \5b8b\4f53;overflow:hidden;}
 .school-brief .sb-con p{line-height:24px;color:#7A7A7A;}
 .school-brief .sb-con .jiathis_style{float:right;margin:23px 10px 0 0;}
+
+.school-intro{padding:26px 80px 168px 80px;}
+.school-intro p{margin-bottom:25px;line-height:22px;text-indent:2em;}
+.school-intro p strong{color:#000;}
+
+.school-article-list .article{width:944px;}
+.school-article-list .article .a-img{display:inline;float:left;width:107px;}
+.school-article-list .article .a-img img{width:107px;height:107px;}
+.school-article-list .article .a-r{display:inline;float:right;width:816px;}
+.school-article-list .article .a-title{height:20px;line-height:20px;}
+.school-article-list .article .a-title .date{color:#000;}

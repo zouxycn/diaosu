@@ -353,8 +353,8 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingM
 .user-publish li{display:inline;float:left;width:446px;height:225px;margin:0 19px 27px 19px;border:1px solid #E1E1E1;}
 .user-publish .p-img{display:inline;float:left;width:160px;}
 .user-publish .p-r{display:inline;float:right;width:230px;}
-.user-publish .p-r h3{height:46px;margin-bottom:5px;font:14px/46px "microsoft yahei";}
-.user-publish .p-r p{height:20px;line-height:20px;color:#7A7A7A;overflow:hidden;}
+.user-publish .p-r h3{height:30px;margin:20px 0 12px 0;font:14px/30px "microsoft yahei";}
+.user-publish .p-r p{height:24px;line-height:24px;color:#7A7A7A;overflow:hidden;}
 .user-publish .p-r p span{float:left;}
 .user-publish .p-r p .attr{width:64px;margin-right:6px;}
 .user-publish .p-r p .element{width:160px;height:20px;overflow:hidden;}

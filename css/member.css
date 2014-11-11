@@ -98,12 +98,12 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingM
 .filter-box .bread .sf{display:inline-block;position:relative;line-height:17px;padding:0 24px 0 4px;background-color:#CA3551;color:#FFFFF3;}
 .filter-box .bread .sf i{position:absolute;width:11px;height:11px;top:4px;right:3px;background:url(images/sprite.png) no-repeat -91px -36px;}
 .filter-box .bread .sf:hover i{background-position:-107px -36px;}
-.filter-box .ft-attr{width:66px;height:26px;line-height:26px;margin:0 6px 0 0;font-weight:700;overflow:hidden;}
+.filter-box .ft-attr{width:74px;height:26px;line-height:26px;margin:0 6px 0 0;font-weight:700;overflow:hidden;}
 .filter-box .ft-tag{width:846px;}
 .filter-box .fts-tab{display:none;}
 .filter-box .ft-tag-more{height:100px;padding:0 12px;border:1px solid #D4D4D4;}
 .filter-box .ft-tag-more .fts-tab{display:block;}
-.filter-box .ft-tag a{float:left;height:26px;line-height:26px;margin-right:15px;white-space:nowrap;}
+.filter-box .ft-tag a{float:left;height:26px;line-height:26px;margin:0 15px 5px 0;white-space:nowrap;}
 .filter-box .fts-tab a{width:18px;height:18px;line-height:14px;margin:7px 5px 0 0;text-align:center;}
 .filter-box .fts-tab .cur{background:url(images/sprite.png) no-repeat 0 -75px;color:#FFF;}
 .filter-box .ft-schools{position:relative;}
@@ -372,7 +372,7 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingM
 .work-show-school .tab li a{padding:0;}
 .work-show-school .school-list{margin-top:4px;padding-top:0;}
 .work-show-school .school-list .sl-item{height:187px;margin:0 23px 0 0;}
-.work-show .school-list .sl-item:hover,.work-show .school-list .sl-item-hover{height:185px;}
+.work-show-school .school-list .sl-item:hover,.work-show .school-list .sl-item-hover{height:185px;}
 .work-show-school .school-list .sl-item strong{font-family:"microsoft yahei";}
 .work-show-school .school-list .sl-item p{text-indent:0;text-align:center;}
 .work-show-school .school-list .sl-item:hover p,.work-show-school .school-list .sl-item-hover p{text-indent:0;}
@@ -404,4 +404,22 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingM
 
 .school-teacher{padding:25px 20px;}
 .school-teacher p{line-height:22px;color:#000;text-indent:2em;}
-.school-teacher li{display:inline;float:left;}
+.school-teacher ul{width:980px;margin-top:50px;}
+.school-teacher li{display:inline;float:left;margin:0 50px 32px 0;}
+.school-teacher li img{width:90px;height:90px;}
+.school-teacher li p{text-align:center;text-indent:0;}
+.school-teacher li a:hover p{text-decoration:underline;}
+
+.school-article{padding:18px 20px;overflow:hidden;}
+.school-article h1{font:16px/28px "microsoft yahei";text-align:center;}
+.school-article .s-a-info{text-align:center;}
+.school-article .s-a-info .jiathis_style{display:inline-block;margin-left:18px;vertical-align:middle;}
+.school-article .s-a-info em{margin:0 18px;color:#7A7A7A;}
+.school-article .s-a-text{margin:18px 0 26px 0;}
+.school-article .s-a-text p{line-height:26px;text-indent:2em;}
+.school-article .s-a-img{text-align:center;}
+.school-article .s-a-img img{max-width:100%;height:auto;}
+.school-article .s-a-img p{margin-bottom:20px;}
+
+.graduate-list{margin-top:18px;}
+.graduate-list a{float:left;width:5em;height:20px;line-height:20px;margin-bottom:10px;overflow:hidden;}

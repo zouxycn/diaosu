@@ -98,7 +98,7 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingM
 .filter-box .bread .sf{display:inline-block;position:relative;line-height:17px;padding:0 24px 0 4px;background-color:#CA3551;color:#FFFFF3;}
 .filter-box .bread .sf i{position:absolute;width:11px;height:11px;top:4px;right:3px;background:url(images/sprite.png) no-repeat -91px -36px;}
 .filter-box .bread .sf:hover i{background-position:-107px -36px;}
-.filter-box .ft-attr{width:74px;height:26px;line-height:26px;margin:0 6px 0 0;font-weight:700;overflow:hidden;}
+.filter-box .ft-attr{width:80px;height:26px;line-height:26px;margin:0 6px 0 0;font-weight:700;overflow:hidden;+width:90px;}
 .filter-box .ft-tag{width:846px;}
 .filter-box .fts-tab{display:none;}
 .filter-box .ft-tag-more{height:100px;padding:0 12px;border:1px solid #D4D4D4;}

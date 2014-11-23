@@ -174,7 +174,7 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingM
 
 /* member-user */
 .smenu-user ul{width:980px;}
-.smenu li a{margin:0 32px;}
+.smenu li a{margin:0 33px;}
 .header-user{position:relative;}
 .header-user img{width:980px;height:250px;}
 .header-user .user-info{position:absolute;top:60px;left:60px;padding:12px 15px;min-width:194px;_width:194px;_height:52px;}
@@ -364,7 +364,7 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingM
 
 
 /* member-school */
-.smenu-school  li a{margin:0 24px;}
+.smenu-school  li a{margin:0 27px;}
 .header-school{position:relative;}
 .header-school .hbg{width:980px;}
 .header-school .school-logo{position:absolute;width:150px;height:150px;left:32px;top:50%;margin-top:-75px;}
